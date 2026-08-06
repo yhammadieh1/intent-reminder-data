@@ -571,6 +571,42 @@
       <input type="hidden" id="editSubId">
       
       <div class="form-group">
+        <label>رمز الأيقونة (اختَر إيموجي أو اكتب):</label>
+        <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 8px;">
+          <input type="text" id="subIconInput" value="📂" style="width: 70px; text-align: center; font-size: 22px; font-weight: bold; color: var(--accent-gold);">
+          <span style="font-size: 13px; color: var(--text-sub);">انقر على الأيقونة المطلوبة أدناه:</span>
+        </div>
+
+        <div class="emoji-picker-grid" id="subEmojiPicker">
+          <div class="emoji-btn" onclick="selectSubEmoji('📂')">📂</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🌅')">🌅</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🌙')">🌙</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('📿')">📿</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('📖')">📖</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('💝')">💝</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🤲')">🤲</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🕌')">🕌</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('☀️')">☀️</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('📜')">📜</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🕯️')">🕯️</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('✨')">✨</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🛡️')">🛡️</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🌟')">🌟</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('📅')">📅</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🌕')">🌕</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🌸')">🌸</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🌿')">🌿</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🤍')">🤍</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🎯')">🎯</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('🔑')">🔑</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('💡')">💡</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('📋')">📋</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('⭐')">⭐</div>
+          <div class="emoji-btn" onclick="selectSubEmoji('❤️')">❤️</div>
+        </div>
+      </div>
+
+      <div class="form-group">
         <label>اسم التصنيف الفرعي بالعربية:</label>
         <input type="text" id="subTitleArInput" placeholder="مثال: الفجر اليومي">
       </div>
@@ -593,6 +629,41 @@
       <input type="hidden" id="intParentSubId">
       <input type="hidden" id="editIntId">
       
+      <div class="form-group">
+        <label>رمز الأيقونة (اختَر إيموجي أو اكتب):</label>
+        <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 8px;">
+          <input type="text" id="intIconInput" value="✨" style="width: 70px; text-align: center; font-size: 22px; font-weight: bold; color: var(--accent-gold);">
+          <span style="font-size: 13px; color: var(--text-sub);">انقر على الأيقونة المطلوبة أدناه:</span>
+        </div>
+
+        <div class="emoji-picker-grid" id="intEmojiPicker">
+          <div class="emoji-btn" onclick="selectIntEmoji('✨')">✨</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🌅')">🌅</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🌙')">🌙</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('📿')">📿</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('📖')">📖</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('💝')">💝</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🤲')">🤲</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🕌')">🕌</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('☀️')">☀️</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('📜')">📜</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🕯️')">🕯️</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🛡️')">🛡️</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🌟')">🌟</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('📅')">📅</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🌕')">🌕</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🌸')">🌸</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🌿')">🌿</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🤍')">🤍</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🎯')">🎯</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('🔑')">🔑</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('💡')">💡</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('📋')">📋</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('⭐')">⭐</div>
+          <div class="emoji-btn" onclick="selectIntEmoji('❤️')">❤️</div>
+        </div>
+      </div>
+
       <div class="form-group">
         <label>نص النية بالعربية:</label>
         <textarea id="intTextArInput" rows="3" placeholder="مثال: نويت أصلي صلاة الفجر قربةً إلى الله تعالى"></textarea>
@@ -700,7 +771,7 @@
                 intHTML += `
                   <div class="intention-item">
                     <div>
-                      <div class="intention-text">✨ ${escapeHtml(intent.textAr)}</div>
+                      <div class="intention-text">${intent.icon || '✨'} ${escapeHtml(intent.textAr)}</div>
                       <div class="intention-text-en">${escapeHtml(intent.textEn || '')}</div>
                     </div>
                     <div class="item-actions">
@@ -717,7 +788,7 @@
             subHTML += `
               <div class="subcategory-box">
                 <div class="subcategory-header">
-                  <div class="sub-title">📂 ${escapeHtml(sub.titleAr)} <span style="font-size:12px; color:var(--text-sub);">(${escapeHtml(sub.titleEn || '')})</span></div>
+                  <div class="sub-title">${sub.icon || '📂'} ${escapeHtml(sub.titleAr)} <span style="font-size:12px; color:var(--text-sub);">(${escapeHtml(sub.titleEn || '')})</span></div>
                   <div class="item-actions">
                     <button class="btn-gold btn-icon" onclick="openIntentionModal(${cIdx}, ${sIdx})">➕ إضافة نية</button>
                     <button class="btn-outline btn-icon" onclick="openSubModal(${cIdx}, ${sIdx})">✏️ تعديل</button>
@@ -755,11 +826,27 @@
     }
 
     // Emoji Selection
-    function selectEmoji(emoji) {
-      document.getElementById('catIconInput').value = emoji;
-      document.querySelectorAll('#emojiPicker .emoji-btn').forEach(btn => {
+    function selectCatEmoji(emoji) {
+      selectEmojiFor('catIconInput', 'emojiPicker', emoji);
+    }
+
+    function selectSubEmoji(emoji) {
+      selectEmojiFor('subIconInput', 'subEmojiPicker', emoji);
+    }
+
+    function selectIntEmoji(emoji) {
+      selectEmojiFor('intIconInput', 'intEmojiPicker', emoji);
+    }
+
+    function selectEmojiFor(inputId, pickerId, emoji) {
+      document.getElementById(inputId).value = emoji;
+      document.querySelectorAll(`#${pickerId} .emoji-btn`).forEach(btn => {
         btn.classList.toggle('selected', btn.innerText.trim() === emoji);
       });
+    }
+
+    function selectEmoji(emoji) {
+      selectCatEmoji(emoji);
     }
 
     // Category CRUD
@@ -779,7 +866,7 @@
         document.getElementById('catTitleArInput').value = '';
         document.getElementById('catTitleEnInput').value = '';
       }
-      selectEmoji(activeIcon);
+      selectCatEmoji(activeIcon);
       document.getElementById('categoryModal').classList.add('active');
     }
 
@@ -821,23 +908,30 @@
     // Subcategory CRUD
     function openSubModal(cIdx, sIdx = null) {
       document.getElementById('subParentCatId').value = cIdx;
+      let activeIcon = '📂';
       if (sIdx !== null) {
         document.getElementById('subModalTitle').innerText = 'تعديل التصنيف الفرعي';
         document.getElementById('editSubId').value = sIdx;
-        document.getElementById('subTitleArInput').value = appData.categories[cIdx].subcategories[sIdx].titleAr || '';
-        document.getElementById('subTitleEnInput').value = appData.categories[cIdx].subcategories[sIdx].titleEn || '';
+        const sub = appData.categories[cIdx].subcategories[sIdx];
+        activeIcon = sub.icon || '📂';
+        document.getElementById('subIconInput').value = activeIcon;
+        document.getElementById('subTitleArInput').value = sub.titleAr || '';
+        document.getElementById('subTitleEnInput').value = sub.titleEn || '';
       } else {
         document.getElementById('subModalTitle').innerText = 'إضافة تصنيف فرعي';
         document.getElementById('editSubId').value = '';
+        document.getElementById('subIconInput').value = '📂';
         document.getElementById('subTitleArInput').value = '';
         document.getElementById('subTitleEnInput').value = '';
       }
+      selectSubEmoji(activeIcon);
       document.getElementById('subModal').classList.add('active');
     }
 
     function saveSubcategory() {
       const cIdx = document.getElementById('subParentCatId').value;
       const sIdx = document.getElementById('editSubId').value;
+      const icon = document.getElementById('subIconInput').value.trim() || '📂';
       const titleAr = document.getElementById('subTitleArInput').value.trim();
       const titleEn = document.getElementById('subTitleEnInput').value.trim();
 
@@ -848,6 +942,7 @@
       }
 
       if (sIdx !== '') {
+        appData.categories[cIdx].subcategories[sIdx].icon = icon;
         appData.categories[cIdx].subcategories[sIdx].titleAr = titleAr;
         appData.categories[cIdx].subcategories[sIdx].titleEn = titleEn;
       } else {
@@ -855,6 +950,7 @@
           remoteId: 'sub_' + Date.now(),
           titleAr,
           titleEn,
+          icon,
           intentions: []
         });
       }
@@ -875,18 +971,23 @@
     // Intention CRUD
     function openIntentionModal(cIdx, sIdx, iIdx = null) {
       document.getElementById('intParentSubId').value = cIdx + ',' + sIdx;
+      let activeIcon = '✨';
       if (iIdx !== null) {
         document.getElementById('intentionModalTitle').innerText = 'تعديل النية';
         document.getElementById('editIntId').value = iIdx;
         const item = appData.categories[cIdx].subcategories[sIdx].intentions[iIdx];
+        activeIcon = item.icon || '✨';
+        document.getElementById('intIconInput').value = activeIcon;
         document.getElementById('intTextArInput').value = item.textAr || '';
         document.getElementById('intTextEnInput').value = item.textEn || '';
       } else {
         document.getElementById('intentionModalTitle').innerText = 'إضافة نية جديدة';
         document.getElementById('editIntId').value = '';
+        document.getElementById('intIconInput').value = '✨';
         document.getElementById('intTextArInput').value = '';
         document.getElementById('intTextEnInput').value = '';
       }
+      selectIntEmoji(activeIcon);
       document.getElementById('intentionModal').classList.add('active');
     }
 
@@ -896,6 +997,7 @@
       const sIdx = parseInt(parts[1]);
       const iIdx = document.getElementById('editIntId').value;
 
+      const icon = document.getElementById('intIconInput').value.trim() || '✨';
       const textAr = document.getElementById('intTextArInput').value.trim();
       const textEn = document.getElementById('intTextEnInput').value.trim();
 
@@ -905,13 +1007,15 @@
       if (!sub.intentions) sub.intentions = [];
 
       if (iIdx !== '') {
+        sub.intentions[iIdx].icon = icon;
         sub.intentions[iIdx].textAr = textAr;
         sub.intentions[iIdx].textEn = textEn;
       } else {
         sub.intentions.push({
           remoteId: 'int_' + Date.now(),
           textAr,
-          textEn
+          textEn,
+          icon
         });
       }
 
