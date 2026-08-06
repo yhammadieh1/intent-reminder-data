@@ -14,13 +14,18 @@
           "intentions": [
             {
               "remoteId": "int_fajr_1",
-              "textAr": "نويت أصلي صلاة الفجر قربةً إلى الله تعالى",
-              "textEn": "I intend to pray Fajr prayer seeking closeness to Allah"
+              "textAr": "نيّة صلاة الجماعة 27 ضعف",
+              "textEn": "Intention for congregational prayer is 27 times greater"
             },
             {
               "remoteId": "int_fajr_2",
-              "textAr": "نويت أصلي ركعتي سنة الفجر",
-              "textEn": "I intend to pray the two Sunnah rak'ahs of Fajr"
+              "textAr": "نيّة أن تكون في ذمة الله",
+              "textEn": "Intention to be under Allah protection"
+            },
+            {
+              "remoteId": "int_1786005313869",
+              "textAr": "نيّة أجر قيام ليلة",
+              "textEn": "Intention for the reward of praying the night prayer"
             }
           ]
         },
