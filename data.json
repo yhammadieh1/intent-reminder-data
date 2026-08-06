@@ -1,175 +1,197 @@
 {
-  "remote_version": "1.0.0",
-  "categories": [
-    {
-      "remoteId": "cat_fajr",
-      "titleAr": "الصلاة",
-      "titleEn": "Prayer",
-      "icon": "🤲",
-      "subcategories": [
+    "remote_version": "1.0.0",
+    "categories": [
         {
-          "remoteId": "sub_fajr_daily",
-          "titleAr": "الفجر اليومي",
-          "titleEn": "Daily Fajr",
-          "intentions": [
-            {
-              "remoteId": "int_fajr_1",
-              "textAr": "نيّة صلاة الجماعة 27 ضعف",
-              "textEn": "Intention for congregational prayer is 27 times greater"
-            },
-            {
-              "remoteId": "int_fajr_2",
-              "textAr": "نيّة أن تكون في ذمة الله",
-              "textEn": "Intention to be under Allah protection"
-            },
-            {
-              "remoteId": "int_1786005313869",
-              "textAr": "نيّة أجر قيام ليلة",
-              "textEn": "Intention for the reward of praying the night prayer"
-            }
-          ]
+            "remoteId": "cat_fajr",
+            "titleAr": "نية صلاة الفجر",
+            "titleEn": "Fajr Prayer",
+            "icon": "🌅",
+            "subcategories": [
+                {
+                    "remoteId": "sub_fajr_daily",
+                    "titleAr": "الفجر اليومي",
+                    "titleEn": "Daily Fajr",
+                    "icon": "🌅",
+                    "intentions": [
+                        {
+                            "remoteId": "int_fajr_1",
+                            "textAr": "نيّة صلاة الجماعة 27 ضعف",
+                            "textEn": "Intention for congregational prayer is 27 times greater",
+                            "icon": "🕌"
+                        },
+                        {
+                            "remoteId": "int_fajr_2",
+                            "textAr": "نيّة أن تكون في ذمة الله",
+                            "textEn": "Intention to be under Allah protection",
+                            "icon": "🛡️"
+                        },
+                        {
+                            "remoteId": "int_1786005313869",
+                            "textAr": "نيّة أجر قيام ليلة",
+                            "textEn": "Intention for the reward of praying the night prayer",
+                            "icon": "🌟"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_fajr_jama3a",
+                    "titleAr": "الفجر في جماعة",
+                    "titleEn": "Fajr in Congregation",
+                    "icon": "🕌",
+                    "intentions": [
+                        {
+                            "remoteId": "int_fajr_j1",
+                            "textAr": "نويت أصلي الفجر في جماعة ابتغاءَ ثواب الجماعة",
+                            "textEn": "I intend to pray Fajr in congregation seeking its reward",
+                            "icon": "✨"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "remoteId": "sub_fajr_jama3a",
-          "titleAr": "الفجر في جماعة",
-          "titleEn": "Fajr in Congregation",
-          "intentions": [
-            {
-              "remoteId": "int_fajr_j1",
-              "textAr": "نويت أصلي الفجر في جماعة ابتغاءَ ثواب الجماعة",
-              "textEn": "I intend to pray Fajr in congregation seeking its reward"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "remoteId": "cat_fasting",
-      "titleAr": "نية الصيام",
-      "titleEn": "Fasting",
-      "icon": "🌙",
-      "subcategories": [
-        {
-          "remoteId": "sub_fast_monday",
-          "titleAr": "صيام الاثنين",
-          "titleEn": "Monday Fasting",
-          "intentions": [
-            {
-              "remoteId": "int_fast_mon1",
-              "textAr": "نويت صيام يوم الاثنين سنةً لله تعالى",
-              "textEn": "I intend to fast Monday as a Sunnah for Allah"
-            }
-          ]
+            "remoteId": "cat_fasting",
+            "titleAr": "نية الصيام",
+            "titleEn": "Fasting",
+            "icon": "🌙",
+            "subcategories": [
+                {
+                    "remoteId": "sub_fast_monday",
+                    "titleAr": "صيام الاثنين",
+                    "titleEn": "Monday Fasting",
+                    "icon": "📅",
+                    "intentions": [
+                        {
+                            "remoteId": "int_fast_mon1",
+                            "textAr": "نويت صيام يوم الاثنين سنةً لله تعالى",
+                            "textEn": "I intend to fast Monday as a Sunnah for Allah",
+                            "icon": "🌙"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_fast_thursday",
+                    "titleAr": "صيام الخميس",
+                    "titleEn": "Thursday Fasting",
+                    "icon": "📅",
+                    "intentions": [
+                        {
+                            "remoteId": "int_fast_thu1",
+                            "textAr": "نويت صيام يوم الخميس سنةً لله تعالى",
+                            "textEn": "I intend to fast Thursday as a Sunnah for Allah",
+                            "icon": "🌙"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_fast_whiteDays",
+                    "titleAr": "صيام الأيام البيض",
+                    "titleEn": "White Days Fasting",
+                    "icon": "🌕",
+                    "intentions": [
+                        {
+                            "remoteId": "int_fast_wd1",
+                            "textAr": "نويت صيام الأيام البيض (13، 14، 15) من الشهر",
+                            "textEn": "I intend to fast the White Days (13th, 14th, 15th) of the month",
+                            "icon": "✨"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "remoteId": "sub_fast_thursday",
-          "titleAr": "صيام الخميس",
-          "titleEn": "Thursday Fasting",
-          "intentions": [
-            {
-              "remoteId": "int_fast_thu1",
-              "textAr": "نويت صيام يوم الخميس سنةً لله تعالى",
-              "textEn": "I intend to fast Thursday as a Sunnah for Allah"
-            }
-          ]
+            "remoteId": "cat_dhikr",
+            "titleAr": "نية الذكر والدعاء",
+            "titleEn": "Dhikr & Supplication",
+            "icon": "📿",
+            "subcategories": [
+                {
+                    "remoteId": "sub_dhikr_morning",
+                    "titleAr": "أذكار الصباح",
+                    "titleEn": "Morning Adhkar",
+                    "icon": "☀️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_dhikr_m1",
+                            "textAr": "نويت قراءة أذكار الصباح تقرباً إلى الله",
+                            "textEn": "I intend to recite morning adhkar to draw closer to Allah",
+                            "icon": "📿"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_dhikr_evening",
+                    "titleAr": "أذكار المساء",
+                    "titleEn": "Evening Adhkar",
+                    "icon": "🌙",
+                    "intentions": [
+                        {
+                            "remoteId": "int_dhikr_e1",
+                            "textAr": "نويت قراءة أذكار المساء تقرباً إلى الله",
+                            "textEn": "I intend to recite evening adhkar to draw closer to Allah",
+                            "icon": "📿"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "remoteId": "sub_fast_whiteDays",
-          "titleAr": "صيام الأيام البيض",
-          "titleEn": "White Days Fasting",
-          "intentions": [
-            {
-              "remoteId": "int_fast_wd1",
-              "textAr": "نويت صيام الأيام البيض (13، 14، 15) من الشهر",
-              "textEn": "I intend to fast the White Days (13th, 14th, 15th) of the month"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "remoteId": "cat_dhikr",
-      "titleAr": "نية الذكر والدعاء",
-      "titleEn": "Dhikr & Supplication",
-      "icon": "📿",
-      "subcategories": [
-        {
-          "remoteId": "sub_dhikr_morning",
-          "titleAr": "أذكار الصباح",
-          "titleEn": "Morning Adhkar",
-          "intentions": [
-            {
-              "remoteId": "int_dhikr_m1",
-              "textAr": "نويت قراءة أذكار الصباح تقرباً إلى الله",
-              "textEn": "I intend to recite morning adhkar to draw closer to Allah"
-            }
-          ]
+            "remoteId": "cat_quran",
+            "titleAr": "نية تلاوة القرآن",
+            "titleEn": "Quran Recitation",
+            "icon": "📖",
+            "subcategories": [
+                {
+                    "remoteId": "sub_quran_daily",
+                    "titleAr": "الورد اليومي",
+                    "titleEn": "Daily Portion",
+                    "icon": "📜",
+                    "intentions": [
+                        {
+                            "remoteId": "int_quran_d1",
+                            "textAr": "نويت تلاوة ورد القرآن اليومي ابتغاءَ وجه الله",
+                            "textEn": "I intend to recite my daily Quran portion seeking Allah's pleasure",
+                            "icon": "📖"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_quran_tahajjud",
+                    "titleAr": "القرآن في التهجد",
+                    "titleEn": "Quran in Tahajjud",
+                    "icon": "🕯️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_quran_t1",
+                            "textAr": "نويت قراءة القرآن في صلاة التهجد",
+                            "textEn": "I intend to recite Quran during Tahajjud prayer",
+                            "icon": "📖"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "remoteId": "sub_dhikr_evening",
-          "titleAr": "أذكار المساء",
-          "titleEn": "Evening Adhkar",
-          "intentions": [
-            {
-              "remoteId": "int_dhikr_e1",
-              "textAr": "نويت قراءة أذكار المساء تقرباً إلى الله",
-              "textEn": "I intend to recite evening adhkar to draw closer to Allah"
-            }
-          ]
+            "remoteId": "cat_sadaqah",
+            "titleAr": "نية الصدقة والإنفاق",
+            "titleEn": "Charity & Giving",
+            "icon": "💝",
+            "subcategories": [
+                {
+                    "remoteId": "sub_sadaqah_daily",
+                    "titleAr": "الصدقة اليومية",
+                    "titleEn": "Daily Charity",
+                    "icon": "🤲",
+                    "intentions": [
+                        {
+                            "remoteId": "int_sadaqah_d1",
+                            "textAr": "نويت التصدق على المحتاجين ابتغاءَ مرضاة الله",
+                            "textEn": "I intend to give charity to those in need seeking Allah's pleasure",
+                            "icon": "💝"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    },
-    {
-      "remoteId": "cat_quran",
-      "titleAr": "نية تلاوة القرآن",
-      "titleEn": "Quran Recitation",
-      "icon": "📖",
-      "subcategories": [
-        {
-          "remoteId": "sub_quran_daily",
-          "titleAr": "الورد اليومي",
-          "titleEn": "Daily Portion",
-          "intentions": [
-            {
-              "remoteId": "int_quran_d1",
-              "textAr": "نويت تلاوة ورد القرآن اليومي ابتغاءَ وجه الله",
-              "textEn": "I intend to recite my daily Quran portion seeking Allah's pleasure"
-            }
-          ]
-        },
-        {
-          "remoteId": "sub_quran_tahajjud",
-          "titleAr": "القرآن في التهجد",
-          "titleEn": "Quran in Tahajjud",
-          "intentions": [
-            {
-              "remoteId": "int_quran_t1",
-              "textAr": "نويت قراءة القرآن في صلاة التهجد",
-              "textEn": "I intend to recite Quran during Tahajjud prayer"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "remoteId": "cat_sadaqah",
-      "titleAr": "نية الصدقة والإنفاق",
-      "titleEn": "Charity & Giving",
-      "icon": "💝",
-      "subcategories": [
-        {
-          "remoteId": "sub_sadaqah_daily",
-          "titleAr": "الصدقة اليومية",
-          "titleEn": "Daily Charity",
-          "intentions": [
-            {
-              "remoteId": "int_sadaqah_d1",
-              "textAr": "نويت التصدق على المحتاجين ابتغاءَ مرضاة الله",
-              "textEn": "I intend to give charity to those in need seeking Allah's pleasure"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    ]
 }
