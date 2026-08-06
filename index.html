@@ -445,6 +445,10 @@
         <span>🌐 رابط البيانات الحية:</span>
         <input type="text" id="jsonUrlInput" value="https://yhammadieh1.github.io/intent-reminder-data/data.json">
       </div>
+      <div class="source-info">
+        <span>🏷️ الإصدار (Version):</span>
+        <input type="text" id="versionInput" style="width: 100px; text-align: center; font-weight: bold; color: var(--accent-gold);" value="1.0.0" onchange="updateVersionFromInput()">
+      </div>
       <button class="btn-outline" onclick="fetchFromGitHub()">تحديث القائمة</button>
     </div>
 
@@ -590,11 +594,18 @@
         const res = await fetch(url + '?t=' + Date.now());
         if (!res.ok) throw new Error('فشل جلب الملف');
         appData = await res.json();
+        document.getElementById('versionInput').value = appData.remote_version || '1.0.0';
         renderTree();
         showToast('تم جلب البيانات من GitHub بنجاح!');
       } catch (err) {
         showToast('تعذر الجلب المباشر. يرجى التحقق من الرابط.', true);
       }
+    }
+
+    function updateVersionFromInput() {
+      const val = document.getElementById('versionInput').value.trim();
+      appData.remote_version = val || '1.0.0';
+      showToast('تم تحديث رقم الإصدار إلى: ' + appData.remote_version);
     }
 
     function renderTree() {
@@ -838,6 +849,7 @@
 
     // JSON Download
     function downloadJSON() {
+      appData.remote_version = document.getElementById('versionInput').value.trim() || '1.0.0';
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
       const downloadAnchor = document.createElement('a');
       downloadAnchor.setAttribute("href", dataStr);
@@ -845,7 +857,7 @@
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
-      showToast('تم تحميل data.json!');
+      showToast('تم تحميل data.json (إصدار ' + appData.remote_version + ')!');
     }
 
     // Direct GitHub Commit API
@@ -854,6 +866,7 @@
     }
 
     async function commitToGitHub() {
+      appData.remote_version = document.getElementById('versionInput').value.trim() || '1.0.0';
       const repo = document.getElementById('ghRepoInput').value.trim();
       const path = document.getElementById('ghPathInput').value.trim();
       const token = document.getElementById('ghTokenInput').value.trim();
