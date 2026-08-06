@@ -3,9 +3,9 @@
   "categories": [
     {
       "remoteId": "cat_fajr",
-      "titleAr": "نية صلاة الفجر",
-      "titleEn": "Fajr Prayer",
-      "icon": "🌅",
+      "titleAr": "الصلاة",
+      "titleEn": "Prayer",
+      "icon": "🤲",
       "subcategories": [
         {
           "remoteId": "sub_fajr_daily",
