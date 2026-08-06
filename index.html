@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محرّر النوايا - Intentions Web Manager</title>
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #0B132B;
+      --bg-card: #1C2541;
+      --bg-surface: #151D36;
+      --accent-gold: #D4AF37;
+      --accent-gold-hover: #F59E0B;
+      --teal-glow: #0D9488;
+      --text-main: #F8FAFC;
+      --text-sub: #94A3B8;
+      --border: rgba(212, 175, 55, 0.2);
+      --danger: #EF4444;
+      --success: #10B981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: rgba(28, 37, 65, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 32px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--accent-gold), var(--teal-glow));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.3);
+    }
+
+    .brand-title h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .brand-title p {
+      font-size: 12px;
+      color: var(--accent-gold);
+      letter-spacing: 1px;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      font-family: 'Cairo', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-gold {
+      background-color: var(--accent-gold);
+      color: #0B132B;
+    }
+
+    .btn-gold:hover {
+      background-color: var(--accent-gold-hover);
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent-gold);
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    .btn-danger {
+      background: rgba(239, 68, 68, 0.15);
+      color: var(--danger);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .btn-danger:hover {
+      background: var(--danger);
+      color: #fff;
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1200px;
+      width: 100%;
+      margin: 32px auto;
+      padding: 0 24px;
+      flex: 1;
+    }
+
+    /* Source URL Banner */
+    .source-banner {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .source-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .source-info input {
+      direction: ltr;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      color: var(--accent-gold);
+      padding: 8px 14px;
+      border-radius: 8px;
+      width: 380px;
+      font-size: 13px;
+    }
+
+    /* Categories Tree */
+    .tree-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-title {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .category-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .category-header {
+      background: rgba(255,255,255,0.03);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .cat-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .cat-icon {
+      font-size: 28px;
+      background: var(--bg-dark);
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+    }
+
+    .cat-title h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .cat-title p {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .subcategories-container {
+      padding: 16px 24px;
+    }
+
+    .subcategory-box {
+      background: var(--bg-surface);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .subcategory-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(255,255,255,0.08);
+    }
+
+    .sub-title {
+      font-weight: 700;
+      color: var(--accent-gold);
+      font-size: 15px;
+    }
+
+    .intentions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .intention-item {
+      background: var(--bg-dark);
+      padding: 12px 16px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,0.04);
+      transition: border-color 0.2s ease;
+    }
+
+    .intention-item:hover {
+      border-color: var(--border);
+    }
+
+    .intention-text {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .intention-text-en {
+      font-size: 12px;
+      color: var(--text-sub);
+      direction: ltr;
+      text-align: left;
+    }
+
+    .item-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-icon {
+      padding: 6px 10px;
+      font-size: 12px;
+      border-radius: 6px;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(11, 19, 43, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      width: 90%;
+      max-width: 500px;
+      padding: 28px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--accent-gold);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: var(--text-sub);
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--accent-gold);
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    /* Notification Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: var(--teal-glow);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      font-size: 14px;
+      font-weight: 600;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 2000;
+    }
+
+    .toast.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .github-box {
+      background: rgba(13, 148, 136, 0.1);
+      border: 1px solid var(--teal-glow);
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      margin-bottom: 16px;
+      color: #5EEAD4;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon">🌟</div>
+      <div class="brand-title">
+        <h1>محرّر النوايا Web Manager</h1>
+        <p>تطبيق التذكير بالنوايا - Intent Reminder</p>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button class="btn-outline" onclick="fetchFromGitHub()">🔄 جلب البيانات الحالية</button>
+      <button class="btn-outline" onclick="downloadJSON()">💾 تحميل data.json</button>
+      <button class="btn-gold" onclick="openGitHubModal()">🚀 حفظ ومزامنة على GitHub</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Source URL Banner -->
+    <div class="source-banner">
+      <div class="source-info">
+        <span>🌐 رابط البيانات الحية:</span>
+        <input type="text" id="jsonUrlInput" value="https://yhammadieh1.github.io/intent-reminder-data/data.json">
+      </div>
+      <button class="btn-outline" onclick="fetchFromGitHub()">تحديث القائمة</button>
+    </div>
+
+    <!-- Tree View Header -->
+    <div class="tree-header">
+      <div class="tree-title">قائمة التصنيفات والنوايا</div>
+      <button class="btn-gold" onclick="openCategoryModal()">➕ إضافة تصنيف جديد</button>
+    </div>
+
+    <!-- Tree Container -->
+    <div id="treeContainer">
+      <div style="text-align: center; padding: 40px; color: var(--text-sub);">
+        جاري تحميل البيانات من GitHub...
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal: Category Form -->
+  <div class="modal-overlay" id="categoryModal">
+    <div class="modal">
+      <div class="modal-title" id="categoryModalTitle">إضافة تصنيف جديد</div>
+      <input type="hidden" id="editCatId">
+      
+      <div class="form-group">
+        <label>رمز الأيقونة (Emoji):</label>
+        <input type="text" id="catIconInput" value="📋" placeholder="مثال: 🌅, 🌙, 📿">
+      </div>
+      <div class="form-group">
+        <label>اسم التصنيف بالعربية:</label>
+        <input type="text" id="catTitleArInput" placeholder="مثال: نية صلاة الفجر">
+      </div>
+      <div class="form-group">
+        <label>اسم التصنيف بالإنجليزي (English):</label>
+        <input type="text" id="catTitleEnInput" placeholder="Example: Fajr Prayer">
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-outline" onclick="closeModal('categoryModal')">إلغاء</button>
+        <button class="btn-gold" onclick="saveCategory()">حفظ التصنيف</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Subcategory Form -->
+  <div class="modal-overlay" id="subModal">
+    <div class="modal">
+      <div class="modal-title" id="subModalTitle">إضافة تصنيف فرعي</div>
+      <input type="hidden" id="subParentCatId">
+      <input type="hidden" id="editSubId">
+      
+      <div class="form-group">
+        <label>اسم التصنيف الفرعي بالعربية:</label>
+        <input type="text" id="subTitleArInput" placeholder="مثال: الفجر اليومي">
+      </div>
+      <div class="form-group">
+        <label>اسم التصنيف الفرعي بالإنجليزي (English):</label>
+        <input type="text" id="subTitleEnInput" placeholder="Example: Daily Fajr">
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-outline" onclick="closeModal('subModal')">إلغاء</button>
+        <button class="btn-gold" onclick="saveSubcategory()">حفظ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Intention Form -->
+  <div class="modal-overlay" id="intentionModal">
+    <div class="modal">
+      <div class="modal-title" id="intentionModalTitle">إضافة نية جديدة</div>
+      <input type="hidden" id="intParentSubId">
+      <input type="hidden" id="editIntId">
+      
+      <div class="form-group">
+        <label>نص النية بالعربية:</label>
+        <textarea id="intTextArInput" rows="3" placeholder="مثال: نويت أصلي صلاة الفجر قربةً إلى الله تعالى"></textarea>
+      </div>
+      <div class="form-group">
+        <label>نص النية بالإنجليزي (English):</label>
+        <textarea id="intTextEnInput" rows="3" placeholder="Example: I intend to pray Fajr prayer..."></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-outline" onclick="closeModal('intentionModal')">إلغاء</button>
+        <button class="btn-gold" onclick="saveIntention()">حفظ النية</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: GitHub Commit -->
+  <div class="modal-overlay" id="githubModal">
+    <div class="modal">
+      <div class="modal-title">🚀 حفظ ومزامنة على GitHub مباشرة</div>
+      
+      <div class="github-box">
+        💡 للمزامنة التلقائية بنقرة واحدة، أدخل رمز الوصول الشخصي (GitHub Personal Access Token - repo access) الخاص بك:
+      </div>
+
+      <div class="form-group">
+        <label>اسم المستودع (Repo):</label>
+        <input type="text" id="ghRepoInput" value="yhammadieh1/intent-reminder-data">
+      </div>
+      <div class="form-group">
+        <label>اسم الملف (Path):</label>
+        <input type="text" id="ghPathInput" value="data.json">
+      </div>
+      <div class="form-group">
+        <label>رمز Personal Access Token (PAT):</label>
+        <input type="password" id="ghTokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+      </div>
+      <div class="form-group">
+        <label>رسالة التعديل (Commit Message):</label>
+        <input type="text" id="ghCommitMsg" value="Update data.json via Web Manager">
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-outline" onclick="closeModal('githubModal')">إلغاء</button>
+        <button class="btn-gold" onclick="commitToGitHub()">مزامنة وحفظ على GitHub</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">تم التحديث بنجاح!</div>
+
+  <script>
+    let appData = {
+      remote_version: "1.0.0",
+      categories: []
+    };
+
+    // Load initial data
+    window.addEventListener('DOMContentLoaded', () => {
+      fetchFromGitHub();
+    });
+
+    async function fetchFromGitHub() {
+      const url = document.getElementById('jsonUrlInput').value.trim();
+      if (!url) return;
+
+      try {
+        const res = await fetch(url + '?t=' + Date.now());
+        if (!res.ok) throw new Error('فشل جلب الملف');
+        appData = await res.json();
+        renderTree();
+        showToast('تم جلب البيانات من GitHub بنجاح!');
+      } catch (err) {
+        showToast('تعذر الجلب المباشر. يرجى التحقق من الرابط.', true);
+      }
+    }
+
+    function renderTree() {
+      const container = document.getElementById('treeContainer');
+      container.innerHTML = '';
+
+      if (!appData.categories || appData.categories.length === 0) {
+        container.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-sub);">لا توجد تصنيفات بعد. اضغط "إضافة تصنيف جديد" للبدء.</div>`;
+        return;
+      }
+
+      appData.categories.forEach((cat, cIdx) => {
+        const catCard = document.createElement('div');
+        catCard.className = 'category-card';
+
+        let subHTML = '';
+        if (cat.subcategories && cat.subcategories.length > 0) {
+          cat.subcategories.forEach((sub, sIdx) => {
+            let intHTML = '';
+            if (sub.intentions && sub.intentions.length > 0) {
+              sub.intentions.forEach((intent, iIdx) => {
+                intHTML += `
+                  <div class="intention-item">
+                    <div>
+                      <div class="intention-text">✨ ${escapeHtml(intent.textAr)}</div>
+                      <div class="intention-text-en">${escapeHtml(intent.textEn || '')}</div>
+                    </div>
+                    <div class="item-actions">
+                      <button class="btn-outline btn-icon" onclick="openIntentionModal(${cIdx}, ${sIdx}, ${iIdx})">✏️ تعديل</button>
+                      <button class="btn-danger btn-icon" onclick="deleteIntention(${cIdx}, ${sIdx}, ${iIdx})">🗑️ حذف</button>
+                    </div>
+                  </div>
+                `;
+              });
+            } else {
+              intHTML = `<div style="font-size: 12px; color: var(--text-sub); text-align: center; padding: 8px;">لا توجد نوايا داخل هذا التصنيف الفرعي.</div>`;
+            }
+
+            subHTML += `
+              <div class="subcategory-box">
+                <div class="subcategory-header">
+                  <div class="sub-title">📂 ${escapeHtml(sub.titleAr)} <span style="font-size:12px; color:var(--text-sub);">(${escapeHtml(sub.titleEn || '')})</span></div>
+                  <div class="item-actions">
+                    <button class="btn-gold btn-icon" onclick="openIntentionModal(${cIdx}, ${sIdx})">➕ إضافة نية</button>
+                    <button class="btn-outline btn-icon" onclick="openSubModal(${cIdx}, ${sIdx})">✏️ تعديل</button>
+                    <button class="btn-danger btn-icon" onclick="deleteSubcategory(${cIdx}, ${sIdx})">🗑️ حذف</button>
+                  </div>
+                </div>
+                <div class="intentions-list">${intHTML}</div>
+              </div>
+            `;
+          });
+        } else {
+          subHTML = `<div style="font-size: 13px; color: var(--text-sub); text-align: center; padding: 16px;">لا توجد تصنيفات فرعية بعد. اضغط "إضافة تصنيف فرعي" لإنشاء واحد.</div>`;
+        }
+
+        catCard.innerHTML = `
+          <div class="category-header">
+            <div class="cat-meta">
+              <div class="cat-icon">${cat.icon || '📋'}</div>
+              <div class="cat-title">
+                <h3>${escapeHtml(cat.titleAr)}</h3>
+                <p>${escapeHtml(cat.titleEn || '')} • ${cat.subcategories ? cat.subcategories.length : 0} تصنيفات فرعية</p>
+              </div>
+            </div>
+            <div class="item-actions">
+              <button class="btn-gold btn-icon" onclick="openSubModal(${cIdx})">➕ تصنيف فرعي</button>
+              <button class="btn-outline btn-icon" onclick="openCategoryModal(${cIdx})">✏️ تعديل</button>
+              <button class="btn-danger btn-icon" onclick="deleteCategory(${cIdx})">🗑️ حذف</button>
+            </div>
+          </div>
+          <div class="subcategories-container">${subHTML}</div>
+        `;
+
+        container.appendChild(catCard);
+      });
+    }
+
+    // Category CRUD
+    function openCategoryModal(cIdx = null) {
+      if (cIdx !== null) {
+        document.getElementById('categoryModalTitle').innerText = 'تعديل التصنيف';
+        document.getElementById('editCatId').value = cIdx;
+        document.getElementById('catIconInput').value = appData.categories[cIdx].icon || '📋';
+        document.getElementById('catTitleArInput').value = appData.categories[cIdx].titleAr || '';
+        document.getElementById('catTitleEnInput').value = appData.categories[cIdx].titleEn || '';
+      } else {
+        document.getElementById('categoryModalTitle').innerText = 'إضافة تصنيف جديد';
+        document.getElementById('editCatId').value = '';
+        document.getElementById('catIconInput').value = '📋';
+        document.getElementById('catTitleArInput').value = '';
+        document.getElementById('catTitleEnInput').value = '';
+      }
+      document.getElementById('categoryModal').classList.add('active');
+    }
+
+    function saveCategory() {
+      const cIdx = document.getElementById('editCatId').value;
+      const icon = document.getElementById('catIconInput').value.trim() || '📋';
+      const titleAr = document.getElementById('catTitleArInput').value.trim();
+      const titleEn = document.getElementById('catTitleEnInput').value.trim();
+
+      if (!titleAr) { alert('يرجى إدخال اسم التصنيف بالعربية'); return; }
+
+      if (cIdx !== '') {
+        appData.categories[cIdx].icon = icon;
+        appData.categories[cIdx].titleAr = titleAr;
+        appData.categories[cIdx].titleEn = titleEn;
+      } else {
+        appData.categories.push({
+          remoteId: 'cat_' + Date.now(),
+          titleAr,
+          titleEn,
+          icon,
+          subcategories: []
+        });
+      }
+
+      closeModal('categoryModal');
+      renderTree();
+      showToast('تم حفظ التصنيف!');
+    }
+
+    function deleteCategory(cIdx) {
+      if (confirm('هل أنت تأكد من حذف هذا التصنيف وكافة محتوياته؟')) {
+        appData.categories.splice(cIdx, 1);
+        renderTree();
+        showToast('تم حذف التصنيف');
+      }
+    }
+
+    // Subcategory CRUD
+    function openSubModal(cIdx, sIdx = null) {
+      document.getElementById('subParentCatId').value = cIdx;
+      if (sIdx !== null) {
+        document.getElementById('subModalTitle').innerText = 'تعديل التصنيف الفرعي';
+        document.getElementById('editSubId').value = sIdx;
+        document.getElementById('subTitleArInput').value = appData.categories[cIdx].subcategories[sIdx].titleAr || '';
+        document.getElementById('subTitleEnInput').value = appData.categories[cIdx].subcategories[sIdx].titleEn || '';
+      } else {
+        document.getElementById('subModalTitle').innerText = 'إضافة تصنيف فرعي';
+        document.getElementById('editSubId').value = '';
+        document.getElementById('subTitleArInput').value = '';
+        document.getElementById('subTitleEnInput').value = '';
+      }
+      document.getElementById('subModal').classList.add('active');
+    }
+
+    function saveSubcategory() {
+      const cIdx = document.getElementById('subParentCatId').value;
+      const sIdx = document.getElementById('editSubId').value;
+      const titleAr = document.getElementById('subTitleArInput').value.trim();
+      const titleEn = document.getElementById('subTitleEnInput').value.trim();
+
+      if (!titleAr) { alert('يرجى إدخال اسم التصنيف الفرعي بالعربية'); return; }
+
+      if (!appData.categories[cIdx].subcategories) {
+        appData.categories[cIdx].subcategories = [];
+      }
+
+      if (sIdx !== '') {
+        appData.categories[cIdx].subcategories[sIdx].titleAr = titleAr;
+        appData.categories[cIdx].subcategories[sIdx].titleEn = titleEn;
+      } else {
+        appData.categories[cIdx].subcategories.push({
+          remoteId: 'sub_' + Date.now(),
+          titleAr,
+          titleEn,
+          intentions: []
+        });
+      }
+
+      closeModal('subModal');
+      renderTree();
+      showToast('تم حفظ التصنيف الفرعي!');
+    }
+
+    function deleteSubcategory(cIdx, sIdx) {
+      if (confirm('هل أنت تأكد من حذف هذا التصنيف الفرعي؟')) {
+        appData.categories[cIdx].subcategories.splice(sIdx, 1);
+        renderTree();
+        showToast('تم الحذف');
+      }
+    }
+
+    // Intention CRUD
+    function openIntentionModal(cIdx, sIdx, iIdx = null) {
+      document.getElementById('intParentSubId').value = cIdx + ',' + sIdx;
+      if (iIdx !== null) {
+        document.getElementById('intentionModalTitle').innerText = 'تعديل النية';
+        document.getElementById('editIntId').value = iIdx;
+        const item = appData.categories[cIdx].subcategories[sIdx].intentions[iIdx];
+        document.getElementById('intTextArInput').value = item.textAr || '';
+        document.getElementById('intTextEnInput').value = item.textEn || '';
+      } else {
+        document.getElementById('intentionModalTitle').innerText = 'إضافة نية جديدة';
+        document.getElementById('editIntId').value = '';
+        document.getElementById('intTextArInput').value = '';
+        document.getElementById('intTextEnInput').value = '';
+      }
+      document.getElementById('intentionModal').classList.add('active');
+    }
+
+    function saveIntention() {
+      const parts = document.getElementById('intParentSubId').value.split(',');
+      const cIdx = parseInt(parts[0]);
+      const sIdx = parseInt(parts[1]);
+      const iIdx = document.getElementById('editIntId').value;
+
+      const textAr = document.getElementById('intTextArInput').value.trim();
+      const textEn = document.getElementById('intTextEnInput').value.trim();
+
+      if (!textAr) { alert('يرجى إدخال نص النية بالعربية'); return; }
+
+      const sub = appData.categories[cIdx].subcategories[sIdx];
+      if (!sub.intentions) sub.intentions = [];
+
+      if (iIdx !== '') {
+        sub.intentions[iIdx].textAr = textAr;
+        sub.intentions[iIdx].textEn = textEn;
+      } else {
+        sub.intentions.push({
+          remoteId: 'int_' + Date.now(),
+          textAr,
+          textEn
+        });
+      }
+
+      closeModal('intentionModal');
+      renderTree();
+      showToast('تم حفظ النية!');
+    }
+
+    function deleteIntention(cIdx, sIdx, iIdx) {
+      if (confirm('هل أنت تأكد من حذف هذه النية؟')) {
+        appData.categories[cIdx].subcategories[sIdx].intentions.splice(iIdx, 1);
+        renderTree();
+        showToast('تم حذف النية');
+      }
+    }
+
+    // JSON Download
+    function downloadJSON() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", "data.json");
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      showToast('تم تحميل data.json!');
+    }
+
+    // Direct GitHub Commit API
+    function openGitHubModal() {
+      document.getElementById('githubModal').classList.add('active');
+    }
+
+    async function commitToGitHub() {
+      const repo = document.getElementById('ghRepoInput').value.trim();
+      const path = document.getElementById('ghPathInput').value.trim();
+      const token = document.getElementById('ghTokenInput').value.trim();
+      const message = document.getElementById('ghCommitMsg').value.trim();
+
+      if (!token) { alert('يرجى إدخال GitHub Access Token'); return; }
+
+      showToast('جاري الحفظ على GitHub...');
+
+      try {
+        // First get current file SHA
+        const getRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
+          headers: { 'Authorization': `token ${token}` }
+        });
+
+        let sha = null;
+        if (getRes.ok) {
+          const fileData = await getRes.json();
+          sha = fileData.sha;
+        }
+
+        const contentEncoded = btoa(unescape(encodeURIComponent(JSON.stringify(appData, null, 2))));
+
+        const putRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: message,
+            content: contentEncoded,
+            sha: sha
+          })
+        });
+
+        if (!putRes.ok) {
+          const errData = await putRes.json();
+          throw new Error(errData.message || 'فشل التحديث');
+        }
+
+        closeModal('githubModal');
+        showToast('🎉 تم الحفظ والمزامنة على GitHub بنجاح!');
+      } catch (err) {
+        alert('حدث خطأ أثناء الحفظ على GitHub: ' + err.message);
+      }
+    }
+
+    // Helpers
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+
+    function showToast(msg, isError = false) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.style.background = isError ? '#EF4444' : '#0D9488';
+      toast.classList.add('active');
+      setTimeout(() => toast.classList.remove('active'), 3000);
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+  </script>
+</body>
+</html>
