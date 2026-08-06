@@ -1,49 +1,309 @@
 {
-    "remote_version": "1.0.0",
+    "remote_version": "1.1.0",
     "categories": [
         {
-            "remoteId": "cat_fajr",
-            "titleAr": "نية صلاة الفجر",
-            "titleEn": "Fajr Prayer",
-            "icon": "🌅",
+            "remoteId": "cat_prayers",
+            "titleAr": "الصلوات والإصلاح",
+            "titleEn": "Prayers & Purification",
+            "icon": "🕌",
             "subcategories": [
                 {
-                    "remoteId": "sub_fajr_daily",
-                    "titleAr": "الفجر اليومي",
-                    "titleEn": "Daily Fajr",
+                    "remoteId": "sub_fajr",
+                    "titleAr": "صلاة الفجر",
+                    "titleEn": "Fajr Prayer",
                     "icon": "🌅",
                     "intentions": [
                         {
                             "remoteId": "int_fajr_1",
-                            "textAr": "نيّة صلاة الجماعة 27 ضعف",
-                            "textEn": "Intention for congregational prayer is 27 times greater",
+                            "textAr": "نيّة صلاة الجماعة 27 ضعفاً",
+                            "textEn": "Intention for 27 times reward of congregational prayer",
                             "icon": "🕌"
                         },
                         {
                             "remoteId": "int_fajr_2",
-                            "textAr": "نيّة أن تكون في ذمة الله",
-                            "textEn": "Intention to be under Allah protection",
+                            "textAr": "نيّة أن تكون في ذمّة الله وحفظه طوال اليوم",
+                            "textEn": "Intention to be under Allah's protection all day",
                             "icon": "🛡️"
                         },
                         {
-                            "remoteId": "int_1786005313869",
-                            "textAr": "نيّة أجر قيام ليلة",
-                            "textEn": "Intention for the reward of praying the night prayer",
+                            "remoteId": "int_fajr_3",
+                            "textAr": "نيّة أجر قيام ليلة كاملة (عند صلاتها في جماعة)",
+                            "textEn": "Intention for the reward of praying the entire night",
+                            "icon": "🌟"
+                        },
+                        {
+                            "remoteId": "int_fajr_4",
+                            "textAr": "نيّة النور التام يوم القيامة للمشائين في الظلم",
+                            "textEn": "Intention for complete light on Judgment Day",
+                            "icon": "🕯️"
+                        },
+                        {
+                            "remoteId": "int_fajr_5",
+                            "textAr": "نيّة براءة من النفاق والشرك",
+                            "textEn": "Intention to be freed from hypocrisy",
+                            "icon": "✨"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_duha",
+                    "titleAr": "صلاة الضحى",
+                    "titleEn": "Duha Prayer",
+                    "icon": "☀️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_duha_1",
+                            "textAr": "نيّة أداء زكاة 360 مفصلاً في الجسم",
+                            "textEn": "Intention to pay charity for all 360 joints in the body",
+                            "icon": "🦴"
+                        },
+                        {
+                            "remoteId": "int_duha_2",
+                            "textAr": "نيّة بناء بيت في الجنة (عند صلاة 12 ركعة)",
+                            "textEn": "Intention to build a house in Paradise by praying 12 units",
+                            "icon": "🏰"
+                        },
+                        {
+                            "remoteId": "int_duha_3",
+                            "textAr": "نيّة أجر حجة وعمرة تامة (بعد القعود للذكر حتى الشروق)",
+                            "textEn": "Intention for reward of Hajj and Umrah after morning dhikr",
+                            "icon": "🕋"
+                        },
+                        {
+                            "remoteId": "int_duha_4",
+                            "textAr": "نيّة أن تكون من الأوابين المسبحين",
+                            "textEn": "Intention to be counted among the oft-returning to Allah",
+                            "icon": "🤍"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_sunan_rawatib",
+                    "titleAr": "السنن الرواطب",
+                    "titleEn": "Sunan Rawatib",
+                    "icon": "✨",
+                    "intentions": [
+                        {
+                            "remoteId": "int_rawatib_1",
+                            "textAr": "نيّة بناء بيت في الجنة بعد صلاة 12 ركعة راتبة يومياً",
+                            "textEn": "Intention to build a house in Jannah with 12 voluntary units daily",
+                            "icon": "🏡"
+                        },
+                        {
+                            "remoteId": "int_rawatib_2",
+                            "textAr": "نيّة نيل ركعتي الفجر اللتين هما خير من الدنيا وما فيها",
+                            "textEn": "Intention for Fajr Sunnah being better than the world and all in it",
+                            "icon": "🌍"
+                        },
+                        {
+                            "remoteId": "int_rawatib_3",
+                            "textAr": "نيّة تحريم الجسد على النار بصلاة 4 قبل الظهر و4 بعدها",
+                            "textEn": "Intention for protection from Hellfire by praying 4 units before and after Dhuhr",
+                            "icon": "🔥"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_qiyam",
+                    "titleAr": "قيام الليل والتهجد",
+                    "titleEn": "Night Prayer (Qiyam)",
+                    "icon": "🌙",
+                    "intentions": [
+                        {
+                            "remoteId": "int_qiyam_1",
+                            "textAr": "نيّة الشرف وعلو المنزلة للمؤمن",
+                            "textEn": "Intention for spiritual honor and elevated status",
+                            "icon": "👑"
+                        },
+                        {
+                            "remoteId": "int_qiyam_2",
+                            "textAr": "نيّة إجابة الدعاء والتنزّل الإلهي في الثلث الأخير",
+                            "textEn": "Intention for answered prayers during the last third of the night",
+                            "icon": "🌌"
+                        },
+                        {
+                            "remoteId": "int_qiyam_3",
+                            "textAr": "نيّة تكفير السيئات والمنهاة عن الإثم",
+                            "textEn": "Intention to expiate sins and prevent wrongdoing",
+                            "icon": "🧼"
+                        },
+                        {
+                            "remoteId": "int_qiyam_4",
+                            "textAr": "نيّة التكتب من الذاكرين الله كثيراً ولا تكتب من الغافلين",
+                            "textEn": "Intention not to be recorded among the heedless",
+                            "icon": "📜"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_witr",
+                    "titleAr": "صلاة الوتر",
+                    "titleEn": "Witr Prayer",
+                    "icon": "🌟",
+                    "intentions": [
+                        {
+                            "remoteId": "int_witr_1",
+                            "textAr": "نيّة محبة الله لأن الله وتر يحب الوتر",
+                            "textEn": "Intention to gain Allah's love as He is One and loves the Witr",
+                            "icon": "❤️"
+                        },
+                        {
+                            "remoteId": "int_witr_2",
+                            "textAr": "نيّة ختم صلاة الليل بواحدة اقتداءً بالسنة",
+                            "textEn": "Intention to seal the night's prayers with Sunnah",
+                            "icon": "🕊️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_wudu",
+                    "titleAr": "الوضوء وسننه",
+                    "titleEn": "Ablution (Wudu)",
+                    "icon": "💧",
+                    "intentions": [
+                        {
+                            "remoteId": "int_wudu_1",
+                            "textAr": "نيّة تساقط الخطايا والذنوب مع كل قطرة ماء",
+                            "textEn": "Intention for sins to drop with every drop of water",
+                            "icon": "💦"
+                        },
+                        {
+                            "remoteId": "int_wudu_2",
+                            "textAr": "نيّة فتح أبواب الجنة الثمانية بعد الذكر التابع له",
+                            "textEn": "Intention to open all 8 gates of Jannah after supplication",
+                            "icon": "🚪"
+                        },
+                        {
+                            "remoteId": "int_wudu_3",
+                            "textAr": "نيّة أجر صلاة ركعتين بعد الوضوء ترجح في الجنة",
+                            "textEn": "Intention for the reward of 2 units of prayer after Wudu",
+                            "icon": "👟"
+                        },
+                        {
+                            "remoteId": "int_wudu_4",
+                            "textAr": "نيّة التحجيل والنور في الأعضاء يوم القيامة",
+                            "textEn": "Intention for radiance on limbs on the Day of Resurrection",
+                            "icon": "✨"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_masjid_walk",
+                    "titleAr": "المشي إلى المسجد",
+                    "titleEn": "Walking to the Mosque",
+                    "icon": "🚶‍♂️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_walk_1",
+                            "textAr": "نيّة رفع درجة ومحو خطيئة بكل خطوة",
+                            "textEn": "Intention for raising status and erasing a sin with every step",
+                            "icon": "👣"
+                        },
+                        {
+                            "remoteId": "int_walk_2",
+                            "textAr": "نيّة إعداد نزُل وضيافة في الجنة كلما غدا أو راح",
+                            "textEn": "Intention for a welcoming home in Jannah for every journey to mosque",
+                            "icon": "🏡"
+                        },
+                        {
+                            "remoteId": "int_walk_3",
+                            "textAr": "نيّة الرباط وانتظار الصلاة بعد الصلاة",
+                            "textEn": "Intention for spiritual steadfastness (Ribat)",
+                            "icon": "🔗"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_tahiyyat_masjid",
+                    "titleAr": "تحية المسجد",
+                    "titleEn": "Mosque Greeting Prayer",
+                    "icon": "🏛️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_tahiyyat_1",
+                            "textAr": "نيّة تعظيم بيوت الله وعدم الجلوس حتى الصلاة",
+                            "textEn": "Intention to honor the house of Allah before sitting",
+                            "icon": "🕌"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_istikhara",
+                    "titleAr": "صلاة الاستخارة",
+                    "titleEn": "Guidance Prayer (Istikhara)",
+                    "icon": "🧭",
+                    "intentions": [
+                        {
+                            "remoteId": "int_istikhara_1",
+                            "textAr": "نيّة تفويض الأمر لله واستخارة العلم والتيسير",
+                            "textEn": "Intention to entrust affairs to Allah's infinite knowledge",
+                            "icon": "🤲"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_tawbah",
+                    "titleAr": "صلاة التوبة",
+                    "titleEn": "Repentance Prayer",
+                    "icon": "🌱",
+                    "intentions": [
+                        {
+                            "remoteId": "int_tawbah_1",
+                            "textAr": "نيّة غفران الذنب وتجديد العهد مع الله",
+                            "textEn": "Intention for forgiveness and renewing covenant with Allah",
+                            "icon": "🕊️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_jummah",
+                    "titleAr": "صلاة الجمعة وتبكيرها",
+                    "titleEn": "Friday Prayer",
+                    "icon": "🕌",
+                    "intentions": [
+                        {
+                            "remoteId": "int_jummah_1",
+                            "textAr": "نيّة أجر قربان بدنة (إبل) عند التبكير في الساعة الأولى",
+                            "textEn": "Intention for maximum reward equal to offering a camel by going early",
+                            "icon": "🐪"
+                        },
+                        {
+                            "remoteId": "int_jummah_2",
+                            "textAr": "نيّة تكفير ما بين الجمعتين وزيادة ثلاثة أيام",
+                            "textEn": "Intention for expiation of sins between the two Fridays",
+                            "icon": "🧼"
+                        },
+                        {
+                            "remoteId": "int_jummah_3",
+                            "textAr": "نيّة أجر عمل سنة صيامها وقيامها بكل خطوة (مع الاغتسال والتبكير)",
+                            "textEn": "Intention for a year's fasting and praying per step with early preparation",
                             "icon": "🌟"
                         }
                     ]
                 },
                 {
-                    "remoteId": "sub_fajr_jama3a",
-                    "titleAr": "الفجر في جماعة",
-                    "titleEn": "Fajr in Congregation",
-                    "icon": "🕌",
+                    "remoteId": "sub_janazah",
+                    "titleAr": "صلاة الجنازة وتشييعها",
+                    "titleEn": "Funeral Prayer",
+                    "icon": "⚰️",
                     "intentions": [
                         {
-                            "remoteId": "int_fajr_j1",
-                            "textAr": "نويت أصلي الفجر في جماعة ابتغاءَ ثواب الجماعة",
-                            "textEn": "I intend to pray Fajr in congregation seeking its reward",
-                            "icon": "✨"
+                            "remoteId": "int_janazah_1",
+                            "textAr": "نيّة تحصيل قيراط من الأجر (مثل جبل أحد)",
+                            "textEn": "Intention for earning a Qirat of reward (like Mount Uhud)",
+                            "icon": "🏔️"
+                        },
+                        {
+                            "remoteId": "int_janazah_2",
+                            "textAr": "نيّة تحصيل قيراط ثانٍ عند اتباعها حتى الدفن",
+                            "textEn": "Intention for a second Qirat by following until burial",
+                            "icon": "⚖️"
+                        },
+                        {
+                            "remoteId": "int_janazah_3",
+                            "textAr": "نيّة أداء حق المسلم على أخيه المسلم",
+                            "textEn": "Intention to fulfill the right of a fellow Muslim",
+                            "icon": "🤝"
                         }
                     ]
                 }
@@ -51,143 +311,1059 @@
         },
         {
             "remoteId": "cat_fasting",
-            "titleAr": "نية الصيام",
-            "titleEn": "Fasting",
+            "titleAr": "الصيام وتطوعه",
+            "titleEn": "Fasting & Voluntary Fasts",
             "icon": "🌙",
             "subcategories": [
                 {
-                    "remoteId": "sub_fast_monday",
-                    "titleAr": "صيام الاثنين",
-                    "titleEn": "Monday Fasting",
-                    "icon": "📅",
+                    "remoteId": "sub_fast_ramadan",
+                    "titleAr": "صيام رمضان",
+                    "titleEn": "Ramadan Fasting",
+                    "icon": "🌙",
                     "intentions": [
                         {
-                            "remoteId": "int_fast_mon1",
-                            "textAr": "نويت صيام يوم الاثنين سنةً لله تعالى",
-                            "textEn": "I intend to fast Monday as a Sunnah for Allah",
-                            "icon": "🌙"
+                            "remoteId": "int_ram_1",
+                            "textAr": "نيّة غفران ما تقدم من الذنوب إيماناً واحتساباً",
+                            "textEn": "Intention for forgiveness of past sins out of faith and seeking reward",
+                            "icon": "✨"
+                        },
+                        {
+                            "remoteId": "int_ram_2",
+                            "textAr": "نيّة دخول الجنة من باب الريان المخصص للصائمين",
+                            "textEn": "Intention to enter Jannah through the Ar-Rayyan gate",
+                            "icon": "🚪"
+                        },
+                        {
+                            "remoteId": "int_ram_3",
+                            "textAr": "نيّة الوقاية والجنّة من النار",
+                            "textEn": "Intention for protection and shield against Hellfire",
+                            "icon": "🛡️"
                         }
                     ]
                 },
                 {
-                    "remoteId": "sub_fast_thursday",
-                    "titleAr": "صيام الخميس",
-                    "titleEn": "Thursday Fasting",
+                    "remoteId": "sub_fast_mon_thu",
+                    "titleAr": "صيام الاثنين والخميس",
+                    "titleEn": "Monday & Thursday Fasting",
                     "icon": "📅",
                     "intentions": [
                         {
-                            "remoteId": "int_fast_thu1",
-                            "textAr": "نويت صيام يوم الخميس سنةً لله تعالى",
-                            "textEn": "I intend to fast Thursday as a Sunnah for Allah",
-                            "icon": "🌙"
+                            "remoteId": "int_monthu_1",
+                            "textAr": "نيّة عرض الأعمال على الله وأنا صائم",
+                            "textEn": "Intention to have deeds presented to Allah while fasting",
+                            "icon": "📋"
+                        },
+                        {
+                            "remoteId": "int_monthu_2",
+                            "textAr": "نيّة الاقتداء بالسنة النبوية الشريفة",
+                            "textEn": "Intention to follow the Prophet's Sunnah",
+                            "icon": "🌱"
+                        },
+                        {
+                            "remoteId": "int_monthu_3",
+                            "textAr": "نيّة المباعدة عن النار سبعين خريفاً",
+                            "textEn": "Intention to distance oneself 70 years from Hellfire",
+                            "icon": "🔥"
                         }
                     ]
                 },
                 {
-                    "remoteId": "sub_fast_whiteDays",
-                    "titleAr": "صيام الأيام البيض",
+                    "remoteId": "sub_fast_white_days",
+                    "titleAr": "صيام الأيام البيض (13-14-15)",
                     "titleEn": "White Days Fasting",
                     "icon": "🌕",
                     "intentions": [
                         {
-                            "remoteId": "int_fast_wd1",
-                            "textAr": "نويت صيام الأيام البيض (13، 14، 15) من الشهر",
-                            "textEn": "I intend to fast the White Days (13th, 14th, 15th) of the month",
+                            "remoteId": "int_white_1",
+                            "textAr": "نيّة أجر صيام الدهر كله (الحسنة بعشر أمثالها)",
+                            "textEn": "Intention for reward equal to fasting a lifetime",
+                            "icon": "♾️"
+                        },
+                        {
+                            "remoteId": "int_white_2",
+                            "textAr": "نيّة تطهير وصحة الجسد والنفس",
+                            "textEn": "Intention for physical and spiritual purification",
+                            "icon": "🌿"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_fast_araraf",
+                    "titleAr": "صيام يوم عرفة",
+                    "titleEn": "Arafah Fasting",
+                    "icon": "🏔️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_arafah_1",
+                            "textAr": "نيّة تكفير ذنوب السنة الماضية والسنة الباقية",
+                            "textEn": "Intention to expiate sins of the previous and coming year",
+                            "icon": "📅"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_fast_ashura",
+                    "titleAr": "صيام عاشوراء وتاسوعاء",
+                    "titleEn": "Ashura Fasting",
+                    "icon": "🌊",
+                    "intentions": [
+                        {
+                            "remoteId": "int_ashura_1",
+                            "textAr": "نيّة تكفير ذنوب السنة الماضية شقاً وشكراً لله",
+                            "textEn": "Intention to expiate sins of the past year in gratitude",
+                            "icon": "🕊️"
+                        },
+                        {
+                            "remoteId": "int_ashura_2",
+                            "textAr": "نيّة مخافة أهل الكتاب بصيام يوم قبله",
+                            "textEn": "Intention to fast 9th and 10th following Sunnah guidelines",
+                            "icon": "📜"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_fast_shawwal",
+                    "titleAr": "صيام الست من شوّال",
+                    "titleEn": "Six Days of Shawwal",
+                    "icon": "🌟",
+                    "intentions": [
+                        {
+                            "remoteId": "int_shawwal_1",
+                            "textAr": "نيّة إتمام أجر صيام صيام سنة كاملة مع رمضان",
+                            "textEn": "Intention to complete full year fasting reward along with Ramadan",
+                            "icon": "🗓️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_iftar_saim",
+                    "titleAr": "تفطير صائم",
+                    "titleEn": "Providing Iftar",
+                    "icon": "🍲",
+                    "intentions": [
+                        {
+                            "remoteId": "int_iftar_1",
+                            "textAr": "نيّة نيل مثل أجر الصائم دون أن ينقص من أجره شيء",
+                            "textEn": "Intention to gain equivalent reward of the fasting person",
+                            "icon": "🎁"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_suhoor",
+                    "titleAr": "تسحر السحور",
+                    "titleEn": "Pre-Dawn Meal (Suhoor)",
+                    "icon": "🥛",
+                    "intentions": [
+                        {
+                            "remoteId": "int_suhoor_1",
+                            "textAr": "نيّة نيل البركة وصلاة الله وملائكته على المتسحرين",
+                            "textEn": "Intention for blessings and angels' prayers upon those taking Suhoor",
                             "icon": "✨"
+                        },
+                        {
+                            "remoteId": "int_suhoor_2",
+                            "textAr": "نيّة التقوي على العبادة ومخالفة أهل الكتاب",
+                            "textEn": "Intention for physical strength in worship",
+                            "icon": "💪"
                         }
                     ]
                 }
             ]
         },
         {
-            "remoteId": "cat_dhikr",
-            "titleAr": "نية الذكر والدعاء",
-            "titleEn": "Dhikr & Supplication",
+            "remoteId": "cat_dhikr_quran",
+            "titleAr": "الذكر وتلاوة القرآن",
+            "titleEn": "Dhikr & Quran",
             "icon": "📿",
             "subcategories": [
                 {
-                    "remoteId": "sub_dhikr_morning",
-                    "titleAr": "أذكار الصباح",
-                    "titleEn": "Morning Adhkar",
-                    "icon": "☀️",
+                    "remoteId": "sub_quran_tilawah",
+                    "titleAr": "تلاوة القرآن والورد اليومي",
+                    "titleEn": "Quran Recitation",
+                    "icon": "📖",
                     "intentions": [
                         {
-                            "remoteId": "int_dhikr_m1",
-                            "textAr": "نويت قراءة أذكار الصباح تقرباً إلى الله",
-                            "textEn": "I intend to recite morning adhkar to draw closer to Allah",
-                            "icon": "📿"
+                            "remoteId": "int_quran_1",
+                            "textAr": "نيّة نيل 10 حسنات عن كل حرف يتلى",
+                            "textEn": "Intention for 10 rewards per recited letter",
+                            "icon": "🔤"
+                        },
+                        {
+                            "remoteId": "int_quran_2",
+                            "textAr": "نيّة الشفاعة يوم القيامة (اقرؤوا القرآن فإنه يأتي شفيعاً)",
+                            "textEn": "Intention for Quran's intercession on Resurrection Day",
+                            "icon": "⚖️"
+                        },
+                        {
+                            "remoteId": "int_quran_3",
+                            "textAr": "نيّة رفعة الدرجات في الجنة (اقرأ وارتقِ ورتل)",
+                            "textEn": "Intention to elevate ranks in Jannah",
+                            "icon": "📈"
+                        },
+                        {
+                            "remoteId": "int_quran_4",
+                            "textAr": "نيّة السكينة ونزول الرحمة وحفّ الملائكة",
+                            "textEn": "Intention for tranquility and angels surrounding the gathering",
+                            "icon": "🕊️"
                         }
                     ]
                 },
                 {
-                    "remoteId": "sub_dhikr_evening",
-                    "titleAr": "أذكار المساء",
-                    "titleEn": "Evening Adhkar",
-                    "icon": "🌙",
+                    "remoteId": "sub_quran_hifz",
+                    "titleAr": "حفظ القرآن وتدبره",
+                    "titleEn": "Quran Memorization & Reflection",
+                    "icon": "🧠",
                     "intentions": [
                         {
-                            "remoteId": "int_dhikr_e1",
-                            "textAr": "نويت قراءة أذكار المساء تقرباً إلى الله",
-                            "textEn": "I intend to recite evening adhkar to draw closer to Allah",
-                            "icon": "📿"
+                            "remoteId": "int_hifz_1",
+                            "textAr": "نيّة أن تكون من أهل الله وخاصته",
+                            "textEn": "Intention to be among Allah's special people",
+                            "icon": "👑"
+                        },
+                        {
+                            "remoteId": "int_hifz_2",
+                            "textAr": "نيّة إلباس الوالدين تاج الكرامة يوم القيامة",
+                            "textEn": "Intention to honor parents with a crown of dignity",
+                            "icon": "👑"
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "remoteId": "cat_quran",
-            "titleAr": "نية تلاوة القرآن",
-            "titleEn": "Quran Recitation",
-            "icon": "📖",
-            "subcategories": [
+                },
                 {
-                    "remoteId": "sub_quran_daily",
-                    "titleAr": "الورد اليومي",
-                    "titleEn": "Daily Portion",
+                    "remoteId": "sub_surah_kahf",
+                    "titleAr": "قراءة سورة الكهف يوم الجمعة",
+                    "titleEn": "Surah Al-Kahf on Friday",
                     "icon": "📜",
                     "intentions": [
                         {
-                            "remoteId": "int_quran_d1",
-                            "textAr": "نويت تلاوة ورد القرآن اليومي ابتغاءَ وجه الله",
-                            "textEn": "I intend to recite my daily Quran portion seeking Allah's pleasure",
-                            "icon": "📖"
+                            "remoteId": "int_kahf_1",
+                            "textAr": "نيّة إضاءة النور ما بين الجمعتين",
+                            "textEn": "Intention for light illuminating between the two Fridays",
+                            "icon": "💡"
+                        },
+                        {
+                            "remoteId": "int_kahf_2",
+                            "textAr": "نيّة العصمة والحماية من فتنة المسيح الدجال",
+                            "textEn": "Intention for protection from trial of Dajjal",
+                            "icon": "🛡️"
                         }
                     ]
                 },
                 {
-                    "remoteId": "sub_quran_tahajjud",
-                    "titleAr": "القرآن في التهجد",
-                    "titleEn": "Quran in Tahajjud",
-                    "icon": "🕯️",
+                    "remoteId": "sub_surah_mulk",
+                    "titleAr": "قراءة سورة الملك قبل النوم",
+                    "titleEn": "Surah Al-Mulk before Sleep",
+                    "icon": "🌌",
                     "intentions": [
                         {
-                            "remoteId": "int_quran_t1",
-                            "textAr": "نويت قراءة القرآن في صلاة التهجد",
-                            "textEn": "I intend to recite Quran during Tahajjud prayer",
+                            "remoteId": "int_mulk_1",
+                            "textAr": "نيّة النجاة والمانعة من عذاب القبر",
+                            "textEn": "Intention for protection against punishment in the grave",
+                            "icon": "🛡️"
+                        },
+                        {
+                            "remoteId": "int_mulk_2",
+                            "textAr": "نيّة شفاعة السورة لصاحبها حتى يغفر له",
+                            "textEn": "Intention for intercession until forgiven",
+                            "icon": "✨"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_surah_ikhlas",
+                    "titleAr": "قراءة سورة الإخلاص",
+                    "titleEn": "Surah Al-Ikhlas",
+                    "icon": "💎",
+                    "intentions": [
+                        {
+                            "remoteId": "int_ikhlas_1",
+                            "textAr": "نيّة تعديل ثلث القرآن في الأجر",
+                            "textEn": "Intention for reward equal to one-third of the Quran",
                             "icon": "📖"
+                        },
+                        {
+                            "remoteId": "int_ikhlas_2",
+                            "textAr": "نيّة بناء قصر في الجنة عند قراءتها 10 مرات",
+                            "textEn": "Intention to build a palace in Jannah by reciting 10 times",
+                            "icon": "🏰"
+                        },
+                        {
+                            "remoteId": "int_ikhlas_3",
+                            "textAr": "نيّة نيل محبة الرحمن لصفته فيها",
+                            "textEn": "Intention to gain Allah's love through loving this Surah",
+                            "icon": "❤️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_ayat_kursi",
+                    "titleAr": "آية الكرسي دبر الصلوات وقبل النوم",
+                    "titleEn": "Ayat al-Kursi",
+                    "icon": "👑",
+                    "intentions": [
+                        {
+                            "remoteId": "int_kursi_1",
+                            "textAr": "نيّة ألا يمنع من دخول الجنة إلا الموت (دبر كل صلاة)",
+                            "textEn": "Intention for nothing between entry to Jannah except death after prayer",
+                            "icon": "🗝️"
+                        },
+                        {
+                            "remoteId": "int_kursi_2",
+                            "textAr": "نيّة الحفظ والشيطان لا يقربك حتى تصبح",
+                            "textEn": "Intention for divine protection from Satan all night",
+                            "icon": "🛡️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_adhkar_morn_eve",
+                    "titleAr": "أذكار الصباح والمساء",
+                    "titleEn": "Morning & Evening Adhkar",
+                    "icon": "🌅",
+                    "intentions": [
+                        {
+                            "remoteId": "int_adhkar_me_1",
+                            "textAr": "نيّة الحصن الحصين والسلامة من كل شر وضر",
+                            "textEn": "Intention for spiritual fortress against harm",
+                            "icon": "🏰"
+                        },
+                        {
+                            "remoteId": "int_adhkar_me_2",
+                            "textAr": "نيّة أداء شكر يومك وليلتك",
+                            "textEn": "Intention to fulfill daily gratitude owed to Allah",
+                            "icon": "🤲"
+                        },
+                        {
+                            "remoteId": "int_adhkar_me_3",
+                            "textAr": "نيّة انشراح الصدر وطمأنينة القلب",
+                            "textEn": "Intention for peace of mind and heart",
+                            "icon": "🤍"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_istighfar",
+                    "titleAr": "الاستغفار وسيد الاستغفار",
+                    "titleEn": "Seeking Forgiveness (Istighfar)",
+                    "icon": "💧",
+                    "intentions": [
+                        {
+                            "remoteId": "int_istighfar_1",
+                            "textAr": "نيّة محو الذنوب وفتح أرزاق الدنيا والآخرة",
+                            "textEn": "Intention to erase sins and unlock provisions",
+                            "icon": "🔑"
+                        },
+                        {
+                            "remoteId": "int_istighfar_2",
+                            "textAr": "نيّة دخول الجنة لمن قال سيد الاستغفار ومات في يومه",
+                            "textEn": "Intention for Jannah by saying Sayyid al-Istighfar",
+                            "icon": "✨"
+                        },
+                        {
+                            "remoteId": "int_istighfar_3",
+                            "textAr": "نيّة تفريج الهموم وجعل من كل ضيق مخرجاً",
+                            "textEn": "Intention for relief from hardship and stress",
+                            "icon": "🌈"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_salawat_nabi",
+                    "titleAr": "الصلاة على النبي ﷺ",
+                    "titleEn": "Salawat on Prophet Muhammad",
+                    "icon": "🌹",
+                    "intentions": [
+                        {
+                            "remoteId": "int_salawat_1",
+                            "textAr": "نيّة صلاة الله عليك 10 مرات مقابل كل صلاة",
+                            "textEn": "Intention to receive 10 blessings from Allah per prayer",
+                            "icon": "✨"
+                        },
+                        {
+                            "remoteId": "int_salawat_2",
+                            "textAr": "نيّة كفاية الهم وغفران الذنب كاملاً",
+                            "textEn": "Intention for worries to be sufficed and sins forgiven",
+                            "icon": "🤍"
+                        },
+                        {
+                            "remoteId": "int_salawat_3",
+                            "textAr": "نيّة نيل شفاعة النبي ﷺ وقربه يوم القيامة",
+                            "textEn": "Intention to gain intercession and closeness to Prophet",
+                            "icon": "🤝"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_hawqala",
+                    "titleAr": "الحوقلة (لا حول ولا قوة إلا بالله)",
+                    "titleEn": "Hawqala",
+                    "icon": "⚡",
+                    "intentions": [
+                        {
+                            "remoteId": "int_hawqala_1",
+                            "textAr": "نيّة غراس كنز من كنز الجنة تحت العرش",
+                            "textEn": "Intention for planting a treasure from Jannah",
+                            "icon": "💎"
+                        },
+                        {
+                            "remoteId": "int_hawqala_2",
+                            "textAr": "نيّة التبرؤ من الحول والشخصي والتحول بقوة الله",
+                            "textEn": "Intention to rely completely on Allah's power",
+                            "icon": "🛡️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_tasbih_tahmid",
+                    "titleAr": "التسبيح والتحميد والتكليل",
+                    "titleEn": "Glorification & Praise",
+                    "icon": "📿",
+                    "intentions": [
+                        {
+                            "remoteId": "int_tasbih_1",
+                            "textAr": "نيّة غرس نخلة في الجنة لكل (سبحان الله العظيم وبحمده)",
+                            "textEn": "Intention to plant a date palm tree in Jannah",
+                            "icon": "🌴"
+                        },
+                        {
+                            "remoteId": "int_tasbih_2",
+                            "textAr": "نيّة حط الخطايا وإن كانت مثل زبد البحر (سبحان الله وبحمده 100 مرة)",
+                            "textEn": "Intention to wipe sins even if like sea foam",
+                            "icon": "🌊"
+                        },
+                        {
+                            "remoteId": "int_tasbih_3",
+                            "textAr": "نيّة أن تكون أحب الكلام إلى الله وأثقل في الميزان",
+                            "textEn": "Intention for words beloved to Allah and heavy on scales",
+                            "icon": "⚖️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_ruqyah",
+                    "titleAr": "الرقية الشرعية والأذكار",
+                    "titleEn": "Ruqyah & Healing",
+                    "icon": "🌿",
+                    "intentions": [
+                        {
+                            "remoteId": "int_ruqyah_1",
+                            "textAr": "نيّة طلب الشفاء والتحصين بالقرآن والسنّة",
+                            "textEn": "Intention for healing and divine protection",
+                            "icon": "🛡️"
+                        },
+                        {
+                            "remoteId": "int_ruqyah_2",
+                            "textAr": "نيّة التوكل التام على الشافي سبحانه",
+                            "textEn": "Intention for complete reliance on the Healer",
+                            "icon": "🤲"
                         }
                     ]
                 }
             ]
         },
         {
-            "remoteId": "cat_sadaqah",
-            "titleAr": "نية الصدقة والإنفاق",
-            "titleEn": "Charity & Giving",
+            "remoteId": "cat_charity_social",
+            "titleAr": "الصدقات والمعاملات الاجتماعية",
+            "titleEn": "Charity & Social Good",
             "icon": "💝",
             "subcategories": [
                 {
-                    "remoteId": "sub_sadaqah_daily",
-                    "titleAr": "الصدقة اليومية",
-                    "titleEn": "Daily Charity",
-                    "icon": "🤲",
+                    "remoteId": "sub_sadaqah_money",
+                    "titleAr": "الصدقة المالية والإنفاق",
+                    "titleEn": "Monetary Charity",
+                    "icon": "💰",
                     "intentions": [
                         {
-                            "remoteId": "int_sadaqah_d1",
-                            "textAr": "نويت التصدق على المحتاجين ابتغاءَ مرضاة الله",
-                            "textEn": "I intend to give charity to those in need seeking Allah's pleasure",
-                            "icon": "💝"
+                            "remoteId": "int_sad_1",
+                            "textAr": "نيّة الاستظلال بظلم الصدقة يوم القيامة",
+                            "textEn": "Intention to be under the shade of charity on Judgment Day",
+                            "icon": "☂️"
+                        },
+                        {
+                            "remoteId": "int_sad_2",
+                            "textAr": "نيّة إطفاء غضب الرب وإطفاء الخطيئة كما يطفئ الماء النار",
+                            "textEn": "Intention to extinguish Allah's anger and wipe sins",
+                            "icon": "🌊"
+                        },
+                        {
+                            "remoteId": "int_sad_3",
+                            "textAr": "نيّة مضاعفة المال 700 ضعف أو أكثر",
+                            "textEn": "Intention for multiplying wealth up to 700 times",
+                            "icon": "📈"
+                        },
+                        {
+                            "remoteId": "int_sad_4",
+                            "textAr": "نيّة دعاء الملكين (اللهم أعط منفقاً خلفاً)",
+                            "textEn": "Intention to receive angels' supplication for replacement",
+                            "icon": "👼"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_sadaqah_jariyah",
+                    "titleAr": "الصدقة الجارية والأوقاف",
+                    "titleEn": "Ongoing Charity (Sadaqah Jariyah)",
+                    "icon": "🌱",
+                    "intentions": [
+                        {
+                            "remoteId": "int_jar_1",
+                            "textAr": "نيّة جريان الأجر بعد الموت وفي القبر",
+                            "textEn": "Intention for continuous rewards flowing after death",
+                            "icon": "♾️"
+                        },
+                        {
+                            "remoteId": "int_jar_2",
+                            "textAr": "نيّة سقي الماء (أفضل الصدقة)",
+                            "textEn": "Intention for providing water as the best charity",
+                            "icon": "💧"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_silat_rahim",
+                    "titleAr": "صلة الرحم والوالدين",
+                    "titleEn": "Kinship & Parents",
+                    "icon": "👨‍👩‍👧‍👦",
+                    "intentions": [
+                        {
+                            "remoteId": "int_rahim_1",
+                            "textAr": "نيّة البسط في الرزق والنسأة والتأخير في الأثر والعمر",
+                            "textEn": "Intention to increase provisions and prolong lifespan",
+                            "icon": "⏳"
+                        },
+                        {
+                            "remoteId": "int_rahim_2",
+                            "textAr": "نيّة رضا الله من رضا الوالدين ودخول أوسط أبواب الجنة",
+                            "textEn": "Intention for Allah's pleasure through parents' satisfaction",
+                            "icon": "🚪"
+                        },
+                        {
+                            "remoteId": "int_rahim_3",
+                            "textAr": "نيّة صلة الله للواصل وقطع من قطعها",
+                            "textEn": "Intention to be connected with Allah by connecting ties",
+                            "icon": "🔗"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_smile_good_word",
+                    "titleAr": "الابتسامة والكلمة الطيبة",
+                    "titleEn": "Smiling & Good Words",
+                    "icon": "😊",
+                    "intentions": [
+                        {
+                            "remoteId": "int_smile_1",
+                            "textAr": "نيّة كتب أجر صدقة بالابتسامة في وجه ألمك",
+                            "textEn": "Intention for charity reward simply by smiling",
+                            "icon": "✨"
+                        },
+                        {
+                            "remoteId": "int_smile_2",
+                            "textAr": "نيّة الكلمة الطيبة صدقة وحماية من النار",
+                            "textEn": "Intention that good speech acts as charity",
+                            "icon": "💬"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_amata_adhan",
+                    "titleAr": "إماطة الأذى عن الطريق",
+                    "titleEn": "Removing Harm from Paths",
+                    "icon": "🧹",
+                    "intentions": [
+                        {
+                            "remoteId": "int_amata_1",
+                            "textAr": "نيّة غفران الذنوب ودخول الجنة بغصن شوك رُفِع",
+                            "textEn": "Intention for forgiveness by removing harmful items",
+                            "icon": "🌳"
+                        },
+                        {
+                            "remoteId": "int_amata_2",
+                            "textAr": "نيّة كسب شعبة من شعب الإيمان",
+                            "textEn": "Intention to fulfill a branch of faith",
+                            "icon": "⚓"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_kfalat_yateem",
+                    "titleAr": "كفالة اليتيم والإحسان إليه",
+                    "titleEn": "Orphan Care",
+                    "icon": "👶",
+                    "intentions": [
+                        {
+                            "remoteId": "int_yateem_1",
+                            "textAr": "نيّة مرافقة النبي ﷺ في الجنة كأصبعي السبابة والوسطى",
+                            "textEn": "Intention to be close companions with the Prophet in Jannah",
+                            "icon": "✌️"
+                        },
+                        {
+                            "remoteId": "int_yateem_2",
+                            "textAr": "نيّة تليين القلب وقضاء الحوائج",
+                            "textEn": "Intention to soften the heart and fulfill needs",
+                            "icon": "🤍"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_qada_hawaij",
+                    "titleAr": "قضاء حوائج الناس وإغاثة الملهوف",
+                    "titleEn": "Helping People in Need",
+                    "icon": "🤝",
+                    "intentions": [
+                        {
+                            "remoteId": "int_qada_1",
+                            "textAr": "نيّة أن يكون الله في عونك ما دمت في عون أخيك",
+                            "textEn": "Intention to receive Allah's help while helping others",
+                            "icon": "🛡️"
+                        },
+                        {
+                            "remoteId": "int_qada_2",
+                            "textAr": "نيّة أجر الاعتكاف في المسجد النبوي شهراً كاملاً",
+                            "textEn": "Intention for reward better than month's seclusion in Prophet's mosque",
+                            "icon": "🕌"
+                        },
+                        {
+                            "remoteId": "int_qada_3",
+                            "textAr": "نيّة تثبيت القدمين على الصراط يوم تزول الأقدام",
+                            "textEn": "Intention for firm steps on the Sirat bridge",
+                            "icon": "🌉"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_islah_dhat_bain",
+                    "titleAr": "الإصلاح بين المتخاصمين",
+                    "titleEn": "Reconciling People",
+                    "icon": "🕊️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_islah_1",
+                            "textAr": "نيّة أجر درجة درجات أفضل من الصلاة والصيام والصدقة",
+                            "textEn": "Intention for reward higher than voluntary prayers and fasting",
+                            "icon": "🥇"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_iyadat_mareed",
+                    "titleAr": "عيادة المريض وزيارته",
+                    "titleEn": "Visiting the Sick",
+                    "icon": "🏥",
+                    "intentions": [
+                        {
+                            "remoteId": "int_vis_1",
+                            "textAr": "نيّة استغفار 70 ألف ملك لك حتى يمسي أو يصبح",
+                            "textEn": "Intention for 70,000 angels praying for your forgiveness",
+                            "icon": "👼"
+                        },
+                        {
+                            "remoteId": "int_vis_2",
+                            "textAr": "نيّة الخوض في رحمة الله وخرافة الجنة (جنائها)",
+                            "textEn": "Intention to immerse in Allah's mercy and Jannah's fruits",
+                            "icon": "🍎"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_salam",
+                    "titleAr": "إفشاء السلام",
+                    "titleEn": "Spreading Peace (Salam)",
+                    "icon": "💬",
+                    "intentions": [
+                        {
+                            "remoteId": "int_salam_1",
+                            "textAr": "نيّة دخول الجنة بسلام ونشر المحبة بين المؤمنين",
+                            "textEn": "Intention to enter Jannah peacefully and foster mutual love",
+                            "icon": "🕊️"
+                        },
+                        {
+                            "remoteId": "int_salam_2",
+                            "textAr": "نيّة تحصيل 30 حسنة بالسيرة الكاملة (السلام عليكم ورحمة الله وبركاته)",
+                            "textEn": "Intention to gain 30 good deeds per complete greeting",
+                            "icon": "✨"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_ihsan_jiran",
+                    "titleAr": "الإحسان إلى الجار",
+                    "titleEn": "Goodness to Neighbors",
+                    "icon": "🏡",
+                    "intentions": [
+                        {
+                            "remoteId": "int_jiran_1",
+                            "textAr": "نيّة تحقيق كمال الإيمان ومحبة الله ورسوله",
+                            "textEn": "Intention to perfect faith and love Allah and His Messenger",
+                            "icon": "❤️"
+                        },
+                        {
+                            "remoteId": "int_jiran_2",
+                            "textAr": "نيّة الأمن من البواثق والدخول في حفظ الله",
+                            "textEn": "Intention to safeguard neighbors from any distress",
+                            "icon": "🛡️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_rifq_hayawan",
+                    "titleAr": "الرفق بالحيوان وإطعامه",
+                    "titleEn": "Animal Welfare",
+                    "icon": "🐾",
+                    "intentions": [
+                        {
+                            "remoteId": "int_animal_1",
+                            "textAr": "نيّة غفران الذنوب كاملة ودخول الجنة في كبد رطبة أجر",
+                            "textEn": "Intention for complete forgiveness by helping living creatures",
+                            "icon": "💧"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "remoteId": "cat_hajj_umrah_manners",
+            "titleAr": "الحج والعمرة والأخلاق والعمل",
+            "titleEn": "Hajj, Umrah, Ethics & Work",
+            "icon": "🕋",
+            "subcategories": [
+                {
+                    "remoteId": "sub_umrah",
+                    "titleAr": "أداء العمرة",
+                    "titleEn": "Performing Umrah",
+                    "icon": "🕋",
+                    "intentions": [
+                        {
+                            "remoteId": "int_umrah_1",
+                            "textAr": "نيّة تكفير الذنوب والخطايا ما بين العمرتين",
+                            "textEn": "Intention for expiation of sins between Umrahs",
+                            "icon": "🧼"
+                        },
+                        {
+                            "remoteId": "int_umrah_2",
+                            "textAr": "نيّة أجر حجة مع النبي ﷺ (عند أدائها في رمضان)",
+                            "textEn": "Intention for reward equal to Hajj with the Prophet in Ramadan",
+                            "icon": "✨"
+                        },
+                        {
+                            "remoteId": "int_umrah_3",
+                            "textAr": "نيّة نفي الفقر والذنوب كما ينفي الكير خبث الحديد",
+                            "textEn": "Intention to eliminate poverty and sins",
+                            "icon": "💎"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_hajj",
+                    "titleAr": "أداء فريضة الحج",
+                    "titleEn": "Performing Hajj",
+                    "icon": "🕋",
+                    "intentions": [
+                        {
+                            "remoteId": "int_hajj_1",
+                            "textAr": "نيّة الرجوع كيوم ولدته أمه من الذنوب (للحج المبرور)",
+                            "textEn": "Intention to return sinless like a newborn child",
+                            "icon": "👶"
+                        },
+                        {
+                            "remoteId": "int_hajj_2",
+                            "textAr": "نيّة نيل ثواب ليس له جزاء إلا الجنة",
+                            "textEn": "Intention for reward whose only recompense is Jannah",
+                            "icon": "🏰"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_work_earning",
+                    "titleAr": "العمل السعي وطلب الرزق الحلال",
+                    "titleEn": "Halal Work & Earning",
+                    "icon": "💼",
+                    "intentions": [
+                        {
+                            "remoteId": "int_work_1",
+                            "textAr": "نيّة العفاف وغنى النفس عن سؤال الناس",
+                            "textEn": "Intention for self-sufficiency and honor",
+                            "icon": "🛡️"
+                        },
+                        {
+                            "remoteId": "int_work_2",
+                            "textAr": "نيّة النفقة على الأهل والأولاد واحتسابها صدقة",
+                            "textEn": "Intention for spending on family count as ongoing charity",
+                            "icon": "👨‍👩‍👧‍👦"
+                        },
+                        {
+                            "remoteId": "int_work_3",
+                            "textAr": "نيّة أجر السعي في سبيل الله عند كف النفس والعيال",
+                            "textEn": "Intention to consider honest work as striving in Allah's cause",
+                            "icon": "⚔️"
+                        },
+                        {
+                            "remoteId": "int_work_4",
+                            "textAr": "نيّة إتقان العمل لأن الله يحب إذا عمل أحدكم عملاً أن يتقنه",
+                            "textEn": "Intention for excellence in work to gain Allah's love",
+                            "icon": "⭐"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_talab_ilm",
+                    "titleAr": "طلب العلم الشرعي والدنيوي النافع",
+                    "titleEn": "Seeking Beneficial Knowledge",
+                    "icon": "📚",
+                    "intentions": [
+                        {
+                            "remoteId": "int_ilm_1",
+                            "textAr": "نيّة تسهيل طريق إلى الجنة",
+                            "textEn": "Intention for Allah to smooth the path to Jannah",
+                            "icon": "🛣️"
+                        },
+                        {
+                            "remoteId": "int_ilm_2",
+                            "textAr": "نيّة وضع الملائكة أجنحتها رضا بما تصنع",
+                            "textEn": "Intention for angels to lower their wings in approval",
+                            "icon": "🦅"
+                        },
+                        {
+                            "remoteId": "int_ilm_3",
+                            "textAr": "نيّة استغفار كل شيء لك حتى الحيتان في الماء",
+                            "textEn": "Intention for all creatures to ask forgiveness for you",
+                            "icon": "🐋"
+                        },
+                        {
+                            "remoteId": "int_ilm_4",
+                            "textAr": "نيّة بناء علم ينتفع به كصدقة جارية بعد الموت",
+                            "textEn": "Intention to leave beneficial knowledge after death",
+                            "icon": "📜"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_husn_khuluq",
+                    "titleAr": "حسن الخلق وتزكية النفس",
+                    "titleEn": "Good Character & Purification",
+                    "icon": "💎",
+                    "intentions": [
+                        {
+                            "remoteId": "int_khuluq_1",
+                            "textAr": "نيّة ثقل الميزان يوم القيامة (أثقل ما يوضع في الميزان)",
+                            "textEn": "Intention to place the heaviest deed on scales",
+                            "icon": "⚖️"
+                        },
+                        {
+                            "remoteId": "int_khuluq_2",
+                            "textAr": "نيّة القرب مجلساً من النبي ﷺ يوم القيامة",
+                            "textEn": "Intention to be seated closest to Prophet on Judgment Day",
+                            "icon": "🪑"
+                        },
+                        {
+                            "remoteId": "int_khuluq_3",
+                            "textAr": "نيّة نيل أجر القائم الصائم بأخلاقك التامة",
+                            "textEn": "Intention to reach ranks of continuous fasting and praying",
+                            "icon": "🏅"
+                        },
+                        {
+                            "remoteId": "int_khuluq_4",
+                            "textAr": "نيّة بيت في أعلى الجنة لمن حسُن خُلقه",
+                            "textEn": "Intention for a home in the highest level of Paradise",
+                            "icon": "🏰"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_kadhm_ghaidh",
+                    "titleAr": "كظم الغيظ والعفو عن الناس",
+                    "titleEn": "Controlling Anger & Forgiveness",
+                    "icon": "🕊️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_ghaidh_1",
+                            "textAr": "نيّة دعوة الله لك على رؤوس الخلائق والتخيير من الحور العين",
+                            "textEn": "Intention to be honored before all creation for withholding anger",
+                            "icon": "👑"
+                        },
+                        {
+                            "remoteId": "int_ghaidh_2",
+                            "textAr": "نيّة نيل عفو الله ومغفرته (وأن تعفوا أقرب للتقوى)",
+                            "textEn": "Intention to receive Allah's forgiveness by forgiving others",
+                            "icon": "🤍"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_sabr_ibtilad",
+                    "titleAr": "الصبر على البلاء والرضا بالقضاء",
+                    "titleEn": "Patience & Acceptance",
+                    "icon": "🛡️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_sabr_1",
+                            "textAr": "نيّة نيل أجر الصابرين غير المحسوب (بغير حساب)",
+                            "textEn": "Intention for endless reward granted without limit",
+                            "icon": "♾️"
+                        },
+                        {
+                            "remoteId": "int_sabr_2",
+                            "textAr": "نيّة تكفير الذنوب والخطايا حتى الشوكة يشاكها",
+                            "textEn": "Intention to erase sins even through a minor thorn prick",
+                            "icon": "🌵"
+                        },
+                        {
+                            "remoteId": "int_sabr_3",
+                            "textAr": "نيّة نيل بيت الحمد في الجنة عند الصبر على فقد ولد أو عزيز",
+                            "textEn": "Intention for House of Praise in Jannah upon grieving patiently",
+                            "icon": "🏡"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_hifz_lisan",
+                    "titleAr": "حفظ اللسان والفرج ترك الغيبة",
+                    "titleEn": "Guarding Speech & Chastity",
+                    "icon": "🤐",
+                    "intentions": [
+                        {
+                            "remoteId": "int_lisan_1",
+                            "textAr": "نيّة ضمان الجنة من النبي ﷺ لمن يضمن ما بين لحييه وفرجه",
+                            "textEn": "Intention to secure guarantee of Jannah from the Prophet",
+                            "icon": "🗝️"
+                        },
+                        {
+                            "remoteId": "int_lisan_2",
+                            "textAr": "نيّة السلامة من المقت وتعديل الخصومات يوم القيامة",
+                            "textEn": "Intention to stay clear of backbiting and bankrupting deeds",
+                            "icon": "🛡️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_shukr_ni3am",
+                    "titleAr": "شكر النعم (الطعام والشراب واللباس)",
+                    "titleEn": "Gratitude for Blessings",
+                    "icon": "🍽️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_shukr_1",
+                            "textAr": "نيّة غفران ما تقدم من الذنب عند دعاء الطعام واللباس",
+                            "textEn": "Intention for past sins forgiven after supplication for meal/clothes",
+                            "icon": "🧼"
+                        },
+                        {
+                            "remoteId": "int_shukr_2",
+                            "textAr": "نيّة رضا الله عن الأكل والشرب (أن يأكل الأكلة فيحمده عليها)",
+                            "textEn": "Intention to gain Allah's pleasure by praising Him over food",
+                            "icon": "❤️"
+                        },
+                        {
+                            "remoteId": "int_shukr_3",
+                            "textAr": "نيّة زيادة النعم والحفظ من زوالها (لئن شكرتم لأزيدنكم)",
+                            "textEn": "Intention for increase in continuous blessings",
+                            "icon": "📈"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_nawm_adhkar",
+                    "titleAr": "النوم على طهارة وأذكاره",
+                    "titleEn": "Sleeping in Purity & Adhkar",
+                    "icon": "🛌",
+                    "intentions": [
+                        {
+                            "remoteId": "int_sleep_1",
+                            "textAr": "نيّة المبيت في شعارك ملك يستغفر لك كلما تقلبت",
+                            "textEn": "Intention for an angel to stay with you asking for forgiveness",
+                            "icon": "👼"
+                        },
+                        {
+                            "remoteId": "int_sleep_2",
+                            "textAr": "نيّة احتساب النوم قوة وطاعة كما تحتسب القومة",
+                            "textEn": "Intention for sleep itself to be rewarded as worship",
+                            "icon": "💤"
+                        },
+                        {
+                            "remoteId": "int_sleep_3",
+                            "textAr": "نيّة الموت على الفطرة وسيد الاستغفار وآية الكرسي",
+                            "textEn": "Intention to pass away upon true faith if soul is taken",
+                            "icon": "✨"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_adab_alssafar",
+                    "titleAr": "آداب السفر ودعاؤه",
+                    "titleEn": "Travel Etiquettes & Prayer",
+                    "icon": "✈️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_travel_1",
+                            "textAr": "نيّة إجابة الدعاء (دعوة المسافر مستجابة)",
+                            "textEn": "Intention to utilize accepted supplications while traveling",
+                            "icon": "🤲"
+                        },
+                        {
+                            "remoteId": "int_travel_2",
+                            "textAr": "نيّة حفظ الله لك ولأهلك ومالك بدعاء أستودعكم الله",
+                            "textEn": "Intention to entrust wealth and family to Allah's protection",
+                            "icon": "🛡️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_amr_bilmaruf",
+                    "titleAr": "الأمر بالمعروف والنهي عن المنكر",
+                    "titleEn": "Enjoining Good & Forbidding Evil",
+                    "icon": "📢",
+                    "intentions": [
+                        {
+                            "remoteId": "int_amr_1",
+                            "textAr": "نيّة أداء وظيفة الأنبياء وحماية المجتمع من الهلاك",
+                            "textEn": "Intention to protect community and carry message of prophets",
+                            "icon": "🛡️"
+                        },
+                        {
+                            "remoteId": "int_amr_2",
+                            "textAr": "نيّة الدلالة على الخير فنيل مثل أجر فاعله",
+                            "textEn": "Intention for full reward of whoever acts upon your guidance",
+                            "icon": "🎁"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_tazkiyat_mal",
+                    "titleAr": "أداء الزكاة المفروضة",
+                    "titleEn": "Obligatory Zakat",
+                    "icon": "⚖️",
+                    "intentions": [
+                        {
+                            "remoteId": "int_zakat_1",
+                            "textAr": "نيّة تطهير المال وتزكية النفس وأداء ركن الإسلام",
+                            "textEn": "Intention to fulfill pillar of Islam and purify wealth",
+                            "icon": "🧼"
+                        },
+                        {
+                            "remoteId": "int_zakat_2",
+                            "textAr": "نيّة الوقاية من محق البركة وعذاب كنز المال",
+                            "textEn": "Intention to safeguard wealth from loss and punishment",
+                            "icon": "🛡️"
+                        }
+                    ]
+                },
+                {
+                    "remoteId": "sub_adab_almasjid",
+                    "titleAr": "آداب دخول وخروج المسجد",
+                    "titleEn": "Mosque Etiquettes",
+                    "icon": "🚪",
+                    "intentions": [
+                        {
+                            "remoteId": "int_mosque_1",
+                            "textAr": "نيّة فتح أبواب رحمة الله عند الدخول وفضله عند الخروج",
+                            "textEn": "Intention to ask for gates of mercy and bounty",
+                            "icon": "🚪"
+                        },
+                        {
+                            "remoteId": "int_mosque_2",
+                            "textAr": "نيّة الاعتكاف بنية المكث وانتظار الصلاة",
+                            "textEn": "Intention for seclusion (I'tikaf) during stay in mosque",
+                            "icon": "🕯️"
                         }
                     ]
                 }
