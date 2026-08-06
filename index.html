@@ -309,6 +309,42 @@
       border-radius: 6px;
     }
 
+    /* Emoji Picker Grid */
+    .emoji-picker-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+      max-height: 130px;
+      overflow-y: auto;
+      padding: 10px;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .emoji-btn {
+      width: 38px;
+      height: 38px;
+      font-size: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .emoji-btn:hover, .emoji-btn.selected {
+      background: var(--accent-gold);
+      color: #0B132B;
+      transform: scale(1.15);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+    }
+
     /* Modal */
     .modal-overlay {
       position: fixed;
@@ -474,8 +510,42 @@
       <input type="hidden" id="editCatId">
       
       <div class="form-group">
-        <label>رمز الأيقونة (Emoji):</label>
-        <input type="text" id="catIconInput" value="📋" placeholder="مثال: 🌅, 🌙, 📿">
+        <label>رمز الأيقونة (اختَر إيموجي أو اكتب):</label>
+        <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 8px;">
+          <input type="text" id="catIconInput" value="📋" style="width: 70px; text-align: center; font-size: 22px; font-weight: bold; color: var(--accent-gold);">
+          <span style="font-size: 13px; color: var(--text-sub);">انقر على الأيقونة المطلوبة أدناه:</span>
+        </div>
+
+        <div class="emoji-picker-grid" id="emojiPicker">
+          <div class="emoji-btn" onclick="selectEmoji('🌅')">🌅</div>
+          <div class="emoji-btn" onclick="selectEmoji('🌙')">🌙</div>
+          <div class="emoji-btn" onclick="selectEmoji('📿')">📿</div>
+          <div class="emoji-btn" onclick="selectEmoji('📖')">📖</div>
+          <div class="emoji-btn" onclick="selectEmoji('💝')">💝</div>
+          <div class="emoji-btn" onclick="selectEmoji('🤲')">🤲</div>
+          <div class="emoji-btn" onclick="selectEmoji('🕋')">🕋</div>
+          <div class="emoji-btn" onclick="selectEmoji('🕌')">🕌</div>
+          <div class="emoji-btn" onclick="selectEmoji('💫')">💫</div>
+          <div class="emoji-btn" onclick="selectEmoji('🌟')">🌟</div>
+          <div class="emoji-btn" onclick="selectEmoji('🌸')">🌸</div>
+          <div class="emoji-btn" onclick="selectEmoji('🌿')">🌿</div>
+          <div class="emoji-btn" onclick="selectEmoji('🤍')">🤍</div>
+          <div class="emoji-btn" onclick="selectEmoji('☀️')">☀️</div>
+          <div class="emoji-btn" onclick="selectEmoji('🕊️')">🕊️</div>
+          <div class="emoji-btn" onclick="selectEmoji('✨')">✨</div>
+          <div class="emoji-btn" onclick="selectEmoji('📜')">📜</div>
+          <div class="emoji-btn" onclick="selectEmoji('🧠')">🧠</div>
+          <div class="emoji-btn" onclick="selectEmoji('🎯')">🎯</div>
+          <div class="emoji-btn" onclick="selectEmoji('🔑')">🔑</div>
+          <div class="emoji-btn" onclick="selectEmoji('💚')">💚</div>
+          <div class="emoji-btn" onclick="selectEmoji('🕯️')">🕯️</div>
+          <div class="emoji-btn" onclick="selectEmoji('💡')">💡</div>
+          <div class="emoji-btn" onclick="selectEmoji('🛡️')">🛡️</div>
+          <div class="emoji-btn" onclick="selectEmoji('📋')">📋</div>
+          <div class="emoji-btn" onclick="selectEmoji('🌱')">🌱</div>
+          <div class="emoji-btn" onclick="selectEmoji('⭐')">⭐</div>
+          <div class="emoji-btn" onclick="selectEmoji('❤️')">❤️</div>
+        </div>
       </div>
       <div class="form-group">
         <label>اسم التصنيف بالعربية:</label>
@@ -684,12 +754,22 @@
       });
     }
 
+    // Emoji Selection
+    function selectEmoji(emoji) {
+      document.getElementById('catIconInput').value = emoji;
+      document.querySelectorAll('#emojiPicker .emoji-btn').forEach(btn => {
+        btn.classList.toggle('selected', btn.innerText.trim() === emoji);
+      });
+    }
+
     // Category CRUD
     function openCategoryModal(cIdx = null) {
+      let activeIcon = '📋';
       if (cIdx !== null) {
         document.getElementById('categoryModalTitle').innerText = 'تعديل التصنيف';
         document.getElementById('editCatId').value = cIdx;
-        document.getElementById('catIconInput').value = appData.categories[cIdx].icon || '📋';
+        activeIcon = appData.categories[cIdx].icon || '📋';
+        document.getElementById('catIconInput').value = activeIcon;
         document.getElementById('catTitleArInput').value = appData.categories[cIdx].titleAr || '';
         document.getElementById('catTitleEnInput').value = appData.categories[cIdx].titleEn || '';
       } else {
@@ -699,6 +779,7 @@
         document.getElementById('catTitleArInput').value = '';
         document.getElementById('catTitleEnInput').value = '';
       }
+      selectEmoji(activeIcon);
       document.getElementById('categoryModal').classList.add('active');
     }
 
